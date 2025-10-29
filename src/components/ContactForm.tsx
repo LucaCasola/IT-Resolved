@@ -2,7 +2,6 @@
 
 import {
   Field,
-  FieldContent,
   FieldDescription,
   FieldError,
   FieldGroup,
@@ -10,13 +9,13 @@ import {
   FieldLegend,
   FieldSeparator,
   FieldSet,
-  FieldTitle,
 } from "@/components/ui/field"
 
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { cn } from "@/lib/utils"
 import { Button } from "./ui/button"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import * as z from "zod"
 import { useForm } from "react-hook-form"
@@ -48,7 +47,30 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>
 
-function ContactForm({className}: React.ComponentProps<"form">) {
+//w-full p-6
+
+const formVariants = cva(
+  "bg-primary-foreground",
+  {
+    variants: {
+      variant: {
+        default: "w-full p-6",
+        contained: "p-10 border-6 rounded-4xl ",
+      }
+    },
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+)
+
+
+function ContactForm({
+  className,
+  variant
+}: React.ComponentProps<"form"> &
+  VariantProps<typeof formVariants>
+) {
   // Initialize EmailJS
   emailjs.init({
     publicKey: 'nB1G3J0t1QV7cmKSo',
@@ -78,51 +100,36 @@ function ContactForm({className}: React.ComponentProps<"form">) {
   })
 
   const onSubmit = async (data: FormData) => {
-    try {
-      console.log("Form submitted:", data)
+    console.log("Form submitted:", data)
 
-        emailjs
-          .send("service_contact", "template_contact", {
-            firstname: data.firstName,
-            lastname: data.lastName,
-            company: data.company || "N/A",
-            email: data.email,
-            phone: data.phone,
-            message: data.message,
-          })
-          .then(
-            () => {
-              console.log('SUCCESS!');
-              alert("Message sent successfully!")
-            },
-            (error) => {
-              console.log('FAILED...', error.text);
-              alert("Message failed to send. Please try again later.")
-            },
-        );
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      
-      reset()
-    } catch (error) {
-      console.error("Error submitting form:", error)
-      alert("Error sending message. Please try again.")
-    }
+    emailjs.send("service_contact", "template_contact", {
+      firstname: data.firstName,
+      lastname: data.lastName,
+      company: data.company || "N/A",
+      email: data.email,
+      phone: data.phone,
+      message: data.message,
+    })
+    .then(
+      () => {
+        alert("Message sent successfully!")
+      },
+      (error) => {
+        alert("Message failed to send. Please try again later.")
+      },
+    );
+
+    reset()
   }
 
   return (
-    <form 
-      onSubmit={handleSubmit(onSubmit)}
-      className={cn(
-        "w-full p-6",
-        className
-      )}
+    <form onSubmit={handleSubmit(onSubmit)}
+      className={cn(formVariants({ variant, className }))}
     >
-      <FieldSet className="max-w-2xl mx-auto">
-        <FieldLegend className="!text-2xl font-bold">Contact Us</FieldLegend>
+      <FieldSet className="w-3xl mx-auto">
+        <FieldLegend className="!text-2xl font-bold">Contact Me</FieldLegend>
         <FieldDescription>
-          Please fill out the form below to get in touch with us.
+          Have any questions or looking for a quote? Fill out the form below and I'll be in touch within the day.
         </FieldDescription>
 
         <FieldGroup>
@@ -225,7 +232,6 @@ function ContactForm({className}: React.ComponentProps<"form">) {
             {isSubmitting ? "Sending..." : "Submit"}
           </Button>
         </Field>
-
       </FieldSet>
     </form>
   )

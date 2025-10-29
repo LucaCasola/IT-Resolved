@@ -2,18 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-import Link from "next/link"
+import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  NavigationMenuViewport,
-} from "@/components/ui/navigation-menu"
+import NavBar from "@/components/NavBar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -61,47 +52,48 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="IT Resolved" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <header className="flex py-4">
-          <div className="flex-1">
-            <h1 className="text-2xl font-bold px-4">IT Resolved</h1>
-          </div>
-
-          <div className="flex-[2] flex justify-center">
-            <div className="bg-accent rounded-md px-5">
-              <NavigationMenu>
-                <NavigationMenuList className="gap-8">
-                  <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">Home</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/contact">Contact</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-
-                <NavigationMenuItem>
-                  <NavigationMenuLink asChild>
-                    <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/about">About</Link>
-                  </NavigationMenuLink>
-                </NavigationMenuItem>
-                </NavigationMenuList>
-              </NavigationMenu>
-            </div>
-          </div>
-
-          <div className="flex-1"></div>
-        </header>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <header><NavBar /></header>
 
         <main>{children}</main>
 
-        <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+        <hr />
 
+        <footer className="flex justify-center gap-32 py-12">
+          <section className="flex flex-col gap-2">
+            <h4>Services</h4>
+            <p>Office Support</p>
+            <p>Website Development</p>
+            <p>Microsoft 365 Configuration</p>
+            <p>Remote Access Configuration</p>
+          </section>
+
+          <section className="flex flex-col gap-2">
+            <h4>Locations</h4>
+            <p>Toronto</p>
+            <p>Vaughan</p>
+            <p>Mississauga</p>
+            <p>Markham</p>
+          </section>
+
+          <section className="flex flex-col gap-3">
+            <div className="row">
+              <MapPin size={20} />
+              <p>Vaughan, ON, L6A2A1, Canada</p>
+            </div>
+            <div className="row">
+              <Clock size={20} />
+              <p>Mon - Fri   9 a.m - 5 p.m</p>
+            </div>
+            <div className="row">
+              <Phone size={20} />
+              <p>(416) 523-5696</p>
+            </div>
+            <div className="row">
+              <Mail size={20} />
+              <p>contact@itresolved.com</p>
+            </div>
+          </section>
         </footer>
       </body>
     </html>
