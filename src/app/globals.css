@@ -149,6 +149,6 @@
 
 @layer utilities {
   .row {
-    @apply flex gap-2 items-center;
+    @apply flex flex-row gap-2 items-center;
   }
 }
