@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <div className="font-sans pb-20 gap-16 pt-20">
-      <main className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center">
         <ContactForm />
-      </main>
+      </div>
     </div>
   );
 }
