@@ -1,5 +1,8 @@
+// src/components/Footer.tsx
+
 "use client";
 
+import Link from "next/link"
 import { cn } from '@/lib/utils';
 import { MapPin, Clock, Phone, Mail } from 'lucide-react';
 
@@ -9,7 +12,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
       <section className="space-y-2">
         <h4>Services</h4>
         <p>Office Support</p>
-        <p>Website Development</p>
+        <p><Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/services/website-development">Website Development</Link></p>
         <p>Microsoft 365 Configuration</p>
         <p>Remote Access Configuration</p>
       </section>
