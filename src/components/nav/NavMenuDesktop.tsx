@@ -1,7 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { isMobile } from "react-device-detect";
 
 import {
   NavigationMenu,
@@ -46,7 +45,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">Website Development</Link>
+                      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/services/website-development">Website Development</Link>
                     </NavigationMenuLink>
                   </li>
                   <li>

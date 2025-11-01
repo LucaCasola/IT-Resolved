@@ -59,7 +59,7 @@ export default function NavBarMobile({className}: {className?: string}) {
                         <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/">Office Support</Link>
                     </li>
                     <li>
-                        <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/">Website </Link>
+                        <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/services/website-development">Website Development</Link>
                     </li>
                     <li>
                         <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/">Microsoft 365</Link>

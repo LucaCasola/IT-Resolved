@@ -1,8 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import NavBarMobile from '@/components/nav/NavBarMobile';
-import NavBarDesktop from '@/components/nav/NavBarDesktop';
+import NavMenuMobile from '@/components/nav/NavMenuMobile';
+import NavMenuDesktop from '@/components/nav/NavMenuDesktop';
 
 export default function NavController() {
   const [isMobile, setIsMobile] = useState(false);
@@ -21,7 +21,7 @@ export default function NavController() {
 
   return (
     <>
-      {isMobile ? <NavBarMobile /> : <NavBarDesktop />}
+      {isMobile ? <NavMenuMobile /> : <NavMenuDesktop />}
     </>
   );
 }
