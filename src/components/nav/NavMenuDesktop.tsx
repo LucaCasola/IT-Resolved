@@ -36,8 +36,8 @@ export default function NavBarDesktop({className}: {className?: string}) {
             {/* Services */}
             <NavigationMenuItem className="block">
               <NavigationMenuTrigger className="navbar-heading">Services</NavigationMenuTrigger>
-              <NavigationMenuContent>
-                <ul className="grid w-72 gap-2 px-4 py-1">
+              <NavigationMenuContent className="z-10">
+                <ul className="grid w-72 gap-2 px-4 py-1 z-10">
                   <li>
                     <NavigationMenuLink asChild>
                       <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">Office Support</Link>
@@ -65,7 +65,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
             {/* Service Areas */}
             <NavigationMenuItem>
               <NavigationMenuTrigger className="navbar-heading">Service Areas</NavigationMenuTrigger>
-              <NavigationMenuContent>
+              <NavigationMenuContent className="z-10">
                 <ul className="grid w-36 gap-2 px-4 py-1 text-lg">
                   <li>
                     <p>Toronto</p>
