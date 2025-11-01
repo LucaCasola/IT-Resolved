@@ -126,7 +126,7 @@ function ContactForm({
     <form onSubmit={handleSubmit(onSubmit)}
       className={cn(formVariants({ variant, className }))}
     >
-      <FieldSet className="w-3xl mx-auto">
+      <FieldSet className="md:w-3xl mx-auto">
         <FieldLegend className="!text-2xl font-bold">Contact Me</FieldLegend>
         <FieldDescription>
           Have any questions or looking for a quote? Fill out the form below and I'll be in touch within the day.
