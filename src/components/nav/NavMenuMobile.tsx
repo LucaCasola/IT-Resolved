@@ -35,7 +35,7 @@ export default function NavBarMobile({className}: {className?: string}) {
       <Sheet>
         <SheetTrigger><Menu size={48}/></SheetTrigger>
         <SheetHeader>
-          <SheetTitle className="hidden">Nav menu</SheetTitle>
+          <SheetTitle className="sr-only">Nav menu</SheetTitle>
         </SheetHeader>
         <SheetContent className="w-50 md:w-90 h-screen justify-between pt-10 pb-6 bg-primary-foreground" side={"left"}>
           <NavigationMenu viewport={false}>
