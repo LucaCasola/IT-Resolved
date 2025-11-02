@@ -14,13 +14,13 @@ import {
 
 import { Button } from "../ui/button"
 
-import { Phone } from 'lucide-react';
+import { Phone } from 'lucide-react';  // Icons
 import { cn } from "@/lib/utils";
 
 
 export default function NavBarDesktop({className}: {className?: string}) {
   return (
-    <div  className={cn("flex justify-center items-center py-4 px-1 bg-primary-foreground", className)}>
+    <header className={cn("flex justify-center items-center py-4 px-1", className)}>
       <div className="flex justify-center items-center">
         <NavigationMenu className="pr-10" viewport={false}>
           <NavigationMenuList className="gap-4 flex-wrap">
@@ -109,6 +109,6 @@ export default function NavBarDesktop({className}: {className?: string}) {
           </div>
         </Button>
       </div>
-    </div>
+    </header>
   )
 }

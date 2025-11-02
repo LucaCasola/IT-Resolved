@@ -25,17 +25,17 @@ import {
 } from "@/components/ui/collapsible"
 
 import { Button } from "../ui/button"
-import { Phone, Menu, ChevronDownIcon } from 'lucide-react';
+import { Phone, Menu, ChevronDownIcon } from 'lucide-react';  // Icons
 import { cn } from "@/lib/utils";
 
 
 export default function NavBarMobile({className}: {className?: string}) {
   return (
-    <div  className={cn(className, "flex flex-row p-6 items-center bg-primary-foreground")}>
+    <header className={cn(className, "flex flex-row p-6 items-center")}>
       <Sheet>
         <SheetTrigger><Menu size={48}/></SheetTrigger>
         <SheetHeader>
-          <SheetTitle className="hidden">Nav menu</SheetTitle>
+          <SheetTitle className="sr-only">Nav menu</SheetTitle>
         </SheetHeader>
         <SheetContent className="w-50 md:w-90 h-screen justify-between pt-10 pb-6 bg-primary-foreground" side={"left"}>
           <NavigationMenu viewport={false}>
@@ -124,6 +124,6 @@ export default function NavBarMobile({className}: {className?: string}) {
       <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">
         <h1 className="text-3xl font-bold whitespace-nowrap">IT Resolved</h1>
       </Link>
-    </div>
+    </header>
   )
 }

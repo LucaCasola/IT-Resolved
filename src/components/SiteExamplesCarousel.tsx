@@ -1,6 +1,7 @@
 // src/app/components/SiteExamplesCarousel.tsx
 
 import Image from "next/image"
+import { Maximize, ChevronRightIcon } from 'lucide-react';  // Icons
 
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Button } from "@/components/ui/button"
@@ -20,8 +21,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
+import { ScrollArea } from "@/components/ui/scroll-area"
 
-const websites: { title: string; link: string; description: string; descriptionBullets: string[]; image: string; imageAlt: string; imageRatio: number; }[] = [
+const websites: { title: string; link: string; description: string; descriptionBullets: string[]; imageAlt: string }[] = [
   {
     title: "Leather Treaty Sports",
     link: "leathertreatysports.com",
@@ -32,9 +41,7 @@ const websites: { title: string; link: string; description: string; descriptionB
       "Utilizes Shopify Liquid for customizations",
       "Currently maintaining and updating the site",
     ],
-    image: "/images/websites/leather-treaty-sports.jpg",
     imageAlt: "Screenshot of Leather Treaty Sports Website",
-    imageRatio: 16 / 9,
   },
   {
     title: "Queen Nest Hotel",
@@ -45,13 +52,11 @@ const websites: { title: string; link: string; description: string; descriptionB
       "Built with GoDaddy's Website Builder",
       "Worked with client to design and launch the site",
     ],
-    image: "/images/websites/queen-nest-hotel.jpg",
     imageAlt: "Screenshot of Queen Nest Hotel Website",
-    imageRatio: 16 / 9,
   },
   {
-    title: "It Resolved (this site!)",
-    link: "",
+    title: "It Resolved",
+    link: "github.com/LucaCasola/IT-Resolved",
     description:
       `Business IT Solutions Tailored for You.`,
     descriptionBullets: [
@@ -60,9 +65,7 @@ const websites: { title: string; link: string; description: string; descriptionB
       "Responsive design across all devices",
       "Hosted on CloudFlare",
     ],
-    image: "/images/websites/it-resolved.jpg",
     imageAlt: "Screenshot of It Resolved Website",
-    imageRatio: 3 / 4,
     },
 ]
 
@@ -76,8 +79,9 @@ export default function SiteExamplesCarousel() {
           {websites.map((website) => (
             <CarouselItem key={website.title} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1 h-full">
-                <Card className="bg-primary-foreground h-full flex flex-col">
-                  <CardHeader>
+                <Card className="bg-primary-foreground h-full flex flex-col gap-6">
+                  {/* Card Header (title & description) */}
+                  <CardHeader className="flex-5 flex flex-col">
                     <CardTitle>{website.title}</CardTitle>
                     <CardDescription>
                       <p className="whitespace-pre-wrap mb-1">{website.description}</p>
@@ -88,15 +92,47 @@ export default function SiteExamplesCarousel() {
                       </ul>
                     </CardDescription>
                   </CardHeader>
-                  <CardContent className="flex-1 flex items-center justify-center p-6">
-                    <AspectRatio ratio={website.imageRatio} className="w-full rounded-md bg-muted">
-                     <Image src={website.image} alt={website.imageAlt} fill/>
+                  {/* Card Content (image) */}
+                  <CardContent className="relative flex-4 flex items-center justify-center">
+                    <Dialog >
+                      <DialogTrigger asChild className="absolute z-9 top-0 right-0 mr-6">
+                        <Button variant="outline"><Maximize /></Button>
+                      </DialogTrigger>
+                      <DialogContent className="w-full px-1.5 pb-1.5">
+                        <DialogHeader>
+                          <DialogTitle className="sr-only">Expand {website.title} image</DialogTitle>
+                        </DialogHeader>
+                          { website.title === "It Resolved" ? (
+                            <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted">
+                              <Image src={`/images/websites/${website.title}/4-3.jpg`} alt={website.imageAlt} fill/>
+                            </AspectRatio>
+                          ) : (
+                            <ScrollArea className="h-120 md:h-[80vh] md:max-h-180 lg:max-h-260 ">
+                              <AspectRatio ratio={4 / 9} className="w-full rounded-md bg-muted">
+                                <Image src={`/images/websites/${website.title}/4-9.jpg`} alt={website.imageAlt} fill/>
+                              </AspectRatio>
+                            </ScrollArea>
+                          )}
+                      </DialogContent>
+                    </Dialog>
+                    <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted border-3 border-white">
+                      <Image src={`/images/websites/${website.title}/4-3.jpg`} alt={website.imageAlt} fill/>
                     </AspectRatio>
                   </CardContent>
-                  <CardFooter className="justify-around mt-auto">
+                  {/* Card Footer (website link) */}
+                  <CardFooter className="flex-1 justify-around mt-auto">
                     {website.title != "It Resolved (this site!)" && (
                       <CardAction>
-                        <Button variant="link"><a href={`https://${website.link}`}>Visit {website.link}</a></Button>
+                        <a href={`https://${website.link}`} target="_blank" rel="external">
+                          <Button variant="outline" className="group">
+                              { website.title === "It Resolved" ? (
+                                <p>Visit repo</p>
+                              ) : (
+                                <p>Visit {website.link}</p>
+                              )}
+                              <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
+                          </Button>
+                        </a>
                       </CardAction>
                     )}
                   </CardFooter>
