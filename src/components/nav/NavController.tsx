@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import NavMenuMobile from '@/components/nav/NavMenuMobile';
 import NavMenuDesktop from '@/components/nav/NavMenuDesktop';
 
-export default function NavController() {
+export default function NavController({className}: {className?: string}) {
   const [isMobile, setIsMobile] = useState(false);
   const breakpoint = 1024; // breakpoint for mobile vs desktop in pixels
 
@@ -21,7 +21,7 @@ export default function NavController() {
 
   return (
     <>
-      {isMobile ? <NavMenuMobile /> : <NavMenuDesktop />}
+      {isMobile ? <NavMenuMobile className={className} /> : <NavMenuDesktop className={className} />}
     </>
   );
 }

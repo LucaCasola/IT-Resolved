@@ -8,7 +8,7 @@ import { MapPin, Clock, Phone, Mail } from 'lucide-react';  // Icons
 
 export default function NavBarDesktop({className}: {className?: string}) {
   return (
-    <footer className={cn(className, "bg-primary-foreground flex justify-center")}>
+    <footer className={cn(className, "flex justify-center")}>
       <div className="grid grid-cols-2 md:grid-cols-3 justify-self-center-safe md:justify-items-center gap-y-6 gap-x-20 md:gap-12 lg:gap-32 my-8 mx-4 md:mx-10">
         <section className="space-y-2 ">
           <h4>Services</h4>

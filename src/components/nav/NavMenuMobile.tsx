@@ -31,7 +31,7 @@ import { cn } from "@/lib/utils";
 
 export default function NavBarMobile({className}: {className?: string}) {
   return (
-    <header className={cn(className, "flex flex-row p-6 items-center bg-primary-foreground")}>
+    <header className={cn(className, "flex flex-row p-6 items-center")}>
       <Sheet>
         <SheetTrigger><Menu size={48}/></SheetTrigger>
         <SheetHeader>
