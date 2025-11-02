@@ -4,7 +4,7 @@
 
 import Link from "next/link"
 import { cn } from '@/lib/utils';
-import { MapPin, Clock, Phone, Mail } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail } from 'lucide-react';  // Icons
 
 export default function NavBarDesktop({className}: {className?: string}) {
   return (
