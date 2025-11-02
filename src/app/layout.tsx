@@ -40,14 +40,12 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="IT Resolved" />
         <link rel="manifest" href="/site.webmanifest" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <header>
           <NavController />
         </header>
 
-        <main>{children}</main>
-
-        <hr />
+        <main className="flex-grow">{children}</main>
 
         <Footer />
       </body>
