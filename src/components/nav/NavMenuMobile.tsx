@@ -31,7 +31,7 @@ import { cn } from "@/lib/utils";
 
 export default function NavBarMobile({className}: {className?: string}) {
   return (
-    <div  className={cn(className, "flex flex-row p-6 items-center bg-primary-foreground")}>
+    <header className={cn(className, "flex flex-row p-6 items-center bg-primary-foreground")}>
       <Sheet>
         <SheetTrigger><Menu size={48}/></SheetTrigger>
         <SheetHeader>
@@ -124,6 +124,6 @@ export default function NavBarMobile({className}: {className?: string}) {
       <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">
         <h1 className="text-3xl font-bold whitespace-nowrap">IT Resolved</h1>
       </Link>
-    </div>
+    </header>
   )
 }

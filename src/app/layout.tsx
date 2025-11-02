@@ -41,9 +41,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
-        <header>
-          <NavController />
-        </header>
+        <NavController />
 
         <main className="flex-grow">{children}</main>
 
