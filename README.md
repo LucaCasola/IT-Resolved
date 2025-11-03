@@ -13,6 +13,10 @@
 ```bash
 # Run development version
 npm run dev
+# Build production version
+npm run build
 # Run production version
+npm run start
+# Run Cloudflare production version
 npm run preview
 ```
