@@ -55,7 +55,7 @@ const websites: { title: string; link: string; description: string; descriptionB
     imageAlt: "Screenshot of Queen Nest Hotel Website",
   },
   {
-    title: "It Resolved",
+    title: "IT Resolved",
     link: "github.com/LucaCasola/IT-Resolved",
     description:
       `Business IT Solutions Tailored for You.`,
@@ -102,9 +102,9 @@ export default function SiteExamplesCarousel() {
                         <DialogHeader>
                           <DialogTitle className="sr-only">Expand {website.title} image</DialogTitle>
                         </DialogHeader>
-                          { website.title === "It Resolved" ? (
+                          { website.title == "IT Resolved" ? (
                             <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted">
-                              <Image src={`/images/websites/${website.title}/4-3.jpg`} alt={website.imageAlt} fill/>
+                              <Image src={`/images/websites/IT Resolved/4-3.jpg`} alt={website.imageAlt} fill/>
                             </AspectRatio>
                           ) : (
                             <ScrollArea className="h-120 md:h-[80vh] md:max-h-180 lg:max-h-260 ">
@@ -121,20 +121,18 @@ export default function SiteExamplesCarousel() {
                   </CardContent>
                   {/* Card Footer (website link) */}
                   <CardFooter className="flex-1 justify-around mt-auto">
-                    {website.title != "It Resolved (this site!)" && (
-                      <CardAction>
-                        <a href={`https://${website.link}`} target="_blank" rel="external">
-                          <Button variant="outline" className="group">
-                              { website.title === "It Resolved" ? (
-                                <p>Visit repo</p>
-                              ) : (
-                                <p>Visit {website.link}</p>
-                              )}
-                              <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
-                          </Button>
-                        </a>
-                      </CardAction>
-                    )}
+                    <CardAction>
+                      <a href={`https://${website.link}`} target="_blank" rel="external">
+                        <Button variant="outline" className="group">
+                            { website.title === "It Resolved" ? (
+                              <p>Visit repo</p>
+                            ) : (
+                              <p>Visit {website.link}</p>
+                            )}
+                            <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
+                        </Button>
+                      </a>
+                    </CardAction>
                   </CardFooter>
                 </Card>
               </div>
