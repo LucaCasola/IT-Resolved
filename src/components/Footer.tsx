@@ -9,16 +9,16 @@ import { MapPin, Clock, Phone, Mail } from 'lucide-react';  // Icons
 export default function NavBarDesktop({className}: {className?: string}) {
   return (
     <footer className={cn(className, "flex justify-center")}>
-      <div className="grid grid-cols-2 md:grid-cols-3 justify-self-center-safe md:justify-items-center gap-y-6 gap-x-20 md:gap-12 lg:gap-32 my-8 mx-4 md:mx-10">
-        <section className="space-y-2 ">
+      <div className="grid grid-cols-2 md:grid-cols-3 justify-self-center-safe justify-items-center gap-y-10 gap-x-10 mx:gap-y-0 md:gap-x-2 lg:gap-24 xl:gap-32 my-8 mx-4 md:mx-10">
+        <section className="space-y-2">
           <h4>Services</h4>
           <p>Office Support</p>
-          <p><Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/services/website-development">Website Development</Link></p>
+          <p><Link className="hover:[text-shadow:1px_0_0_currentColor]" href="/services/website-development">Website Development</Link></p>
           <p>Microsoft 365 Configuration</p>
           <p>Remote Access Configuration</p>
         </section>
 
-        <section className="space-y-2 min-content">
+        <section className="flex flex-col justify-between">
           <h4>Areas</h4>
           <p>Toronto</p>
           <p>Vaughan</p>

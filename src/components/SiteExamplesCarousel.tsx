@@ -30,10 +30,11 @@ import {
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
-const websites: { title: string; link: string; description: string; descriptionBullets: string[]; imageAlt: string }[] = [
+const websites: { title: string; link: string; linkText: string; description: string; descriptionBullets: string[]; imageFolder: string; imageAlt: string }[] = [
   {
     title: "Leather Treaty Sports",
     link: "leathertreatysports.com",
+    linkText: "leathertreatysports.com",
     description:
       "Ecommerce website for personalized leather sports accessories.",
     descriptionBullets: [
@@ -41,22 +42,26 @@ const websites: { title: string; link: string; description: string; descriptionB
       "Utilizes Shopify Liquid for customizations",
       "Currently maintaining and updating the site",
     ],
+    imageFolder: "Leather-Treaty-Sports",
     imageAlt: "Screenshot of Leather Treaty Sports Website",
   },
   {
     title: "Queen Nest Hotel",
     link: "queennesthotel.com",
+    linkText: "queennesthotel.com",
     description:
       "Hotel website offering affordable comfort in the heart of Toronto.",
     descriptionBullets: [
       "Built with GoDaddy's Website Builder",
       "Worked with client to design and launch the site",
     ],
+    imageFolder: "Queen-Nest-Hotel",
     imageAlt: "Screenshot of Queen Nest Hotel Website",
   },
   {
     title: "IT Resolved",
     link: "github.com/LucaCasola/IT-Resolved",
+    linkText: "repo",
     description:
       `Business IT Solutions Tailored for You.`,
     descriptionBullets: [
@@ -65,6 +70,7 @@ const websites: { title: string; link: string; description: string; descriptionB
       "Responsive design across all devices",
       "Hosted on CloudFlare",
     ],
+    imageFolder: "IT-Resolved",
     imageAlt: "Screenshot of It Resolved Website",
     },
 ]
@@ -104,19 +110,19 @@ export default function SiteExamplesCarousel() {
                         </DialogHeader>
                           { website.title == "IT Resolved" ? (
                             <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted">
-                              <Image src={`/images/websites/IT Resolved/4-3.jpg`} alt={website.imageAlt} fill/>
+                              <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill/>
                             </AspectRatio>
                           ) : (
                             <ScrollArea className="h-120 md:h-[80vh] md:max-h-180 lg:max-h-260 ">
                               <AspectRatio ratio={4 / 9} className="w-full rounded-md bg-muted">
-                                <Image src={`/images/websites/${website.title}/4-9.jpg`} alt={website.imageAlt} fill/>
+                                <Image src={`/images/websites/${website.imageFolder}/4-9.jpg`} alt={website.imageAlt} fill/>
                               </AspectRatio>
                             </ScrollArea>
                           )}
                       </DialogContent>
                     </Dialog>
                     <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted border-3 border-white">
-                      <Image src={`/images/websites/${website.title}/4-3.jpg`} alt={website.imageAlt} fill/>
+                      <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill/>
                     </AspectRatio>
                   </CardContent>
                   {/* Card Footer (website link) */}
@@ -124,12 +130,8 @@ export default function SiteExamplesCarousel() {
                     <CardAction>
                       <a href={`https://${website.link}`} target="_blank" rel="external">
                         <Button variant="outline" className="group">
-                            { website.title === "It Resolved" ? (
-                              <p>Visit repo</p>
-                            ) : (
-                              <p>Visit {website.link}</p>
-                            )}
-                            <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
+                          <p>Visit {website.linkText}</p>
+                          <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
                         </Button>
                       </a>
                     </CardAction>
