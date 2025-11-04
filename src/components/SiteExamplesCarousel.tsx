@@ -30,10 +30,11 @@ import {
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
-const websites: { title: string; link: string; description: string; descriptionBullets: string[]; imageAlt: string }[] = [
+const websites: { title: string; link: string; linkText: string; description: string; descriptionBullets: string[]; imageAlt: string }[] = [
   {
     title: "Leather Treaty Sports",
     link: "leathertreatysports.com",
+    linkText: "leathertreatysports.com",
     description:
       "Ecommerce website for personalized leather sports accessories.",
     descriptionBullets: [
@@ -46,6 +47,7 @@ const websites: { title: string; link: string; description: string; descriptionB
   {
     title: "Queen Nest Hotel",
     link: "queennesthotel.com",
+    linkText: "queennesthotel.com",
     description:
       "Hotel website offering affordable comfort in the heart of Toronto.",
     descriptionBullets: [
@@ -57,6 +59,7 @@ const websites: { title: string; link: string; description: string; descriptionB
   {
     title: "IT Resolved",
     link: "github.com/LucaCasola/IT-Resolved",
+    linkText: "repo",
     description:
       `Business IT Solutions Tailored for You.`,
     descriptionBullets: [
@@ -124,12 +127,8 @@ export default function SiteExamplesCarousel() {
                     <CardAction>
                       <a href={`https://${website.link}`} target="_blank" rel="external">
                         <Button variant="outline" className="group">
-                            { website.title === "It Resolved" ? (
-                              <p>Visit repo</p>
-                            ) : (
-                              <p>Visit {website.link}</p>
-                            )}
-                            <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
+                          <p>Visit {website.linkText}</p>
+                          <ChevronRightIcon size={16} className="hover:transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true"/>
                         </Button>
                       </a>
                     </CardAction>
