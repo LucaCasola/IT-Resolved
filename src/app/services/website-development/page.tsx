@@ -11,9 +11,11 @@ export const metadata: Metadata = {
       //<div className="flex flex-col items-center justify-center">
 export default function WebsiteDevelopment() {
   return (
-    <div className="font-sans py-12 md:py-20">
-      <h1 className="text-center mb-14 md:mb-6">Website Development</h1>
-      <SiteExamplesCarousel />
-    </div>
+    <main>
+      <section>
+        <h1 className="text-center mb-14 md:mb-6">Website Development</h1>
+        <SiteExamplesCarousel />
+      </section>
+    </main>
   );
 }

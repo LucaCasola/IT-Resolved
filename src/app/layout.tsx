@@ -43,7 +43,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <NavController className="bg-secondary-foreground" />
 
-        <main className="flex-grow">{children}</main>
+        {children}
 
         <Footer className="bg-secondary-foreground" />
       </body>

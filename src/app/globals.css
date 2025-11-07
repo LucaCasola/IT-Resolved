@@ -124,6 +124,14 @@
     @apply bg-background text-foreground;
   }
   
+  main {
+    @apply grow flex flex-col items-center gap-y-20 my-10 md:my-14 lg:my-20;
+  }
+
+  section {
+    @apply w-full;
+  }
+
   /* Header element defaults */
   h1 {
     @apply text-4xl font-bold text-foreground;
@@ -164,5 +172,9 @@
 
   .navbar-heading {
     @apply bg-transparent text-lg;
+  }
+
+  .section-footer {
+    @apply w-auto flex flex-col justify-between;
   }
 }
