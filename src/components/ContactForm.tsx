@@ -67,7 +67,7 @@ const formVariants = cva(
 )
 
 
-function ContactForm({
+export default function ContactForm({
   className,
   variant
 }: React.ComponentProps<"form"> &
@@ -238,5 +238,3 @@ function ContactForm({
     </form>
   )
 }
-
-export { ContactForm }

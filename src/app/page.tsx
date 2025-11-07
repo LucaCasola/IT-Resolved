@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 
-import { ContactForm } from "@/components/ContactForm";
+import ContactForm from "@/components/ContactForm";
 import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";
 
 export const metadata: Metadata = {
