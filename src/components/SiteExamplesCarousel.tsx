@@ -110,19 +110,19 @@ export default function SiteExamplesCarousel() {
                         </DialogHeader>
                           { website.title == "IT Resolved" ? (
                             <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted">
-                              <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill/>
+                              <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill sizes="..."/>
                             </AspectRatio>
                           ) : (
                             <ScrollArea className="h-120 md:h-[80vh] md:max-h-180 lg:max-h-260 ">
                               <AspectRatio ratio={4 / 9} className="w-full rounded-md bg-muted">
-                                <Image src={`/images/websites/${website.imageFolder}/4-9.jpg`} alt={website.imageAlt} fill/>
+                                <Image src={`/images/websites/${website.imageFolder}/4-9.jpg`} alt={website.imageAlt} fill sizes="..."/>
                               </AspectRatio>
                             </ScrollArea>
                           )}
                       </DialogContent>
                     </Dialog>
                     <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted border-3 border-white">
-                      <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill/>
+                      <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill sizes="..."/>
                     </AspectRatio>
                   </CardContent>
                   {/* Card Footer (website link) */}
