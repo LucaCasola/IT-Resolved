@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 
+import HeroBanner from "@/components/HeroBanner";
 import ContactForm from "@/components/ContactForm";
 import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";
 
@@ -12,9 +13,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-      <main>
-        <SiteExamplesCarousel />
-        <ContactForm />
-      </main>
+    <main className="mt-0">
+      <HeroBanner />
+      <SiteExamplesCarousel />
+      <ContactForm />
+    </main>
   );
 }
