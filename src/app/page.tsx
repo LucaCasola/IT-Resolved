@@ -7,14 +7,22 @@ import ContactForm from "@/components/ContactForm";
 import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";
 
 export const metadata: Metadata = {
-  title: "IT Resolved Homepage",
-  description: "Welcome to IT Resolved, your trusted IT solutions provider.",
+  title: "Tailored IT Solutions | IT Resolved",
+  description: "Professional IT solutions, on-site tech support, and website development to help your business grow.",
 };
 
 export default function Home() {
   return (
     <main className="mt-0">
       <HeroBanner />
+      <div className="col">
+        <h1>IT Resolved Home</h1>
+        <p className="page-description">
+          Welcome to IT Resolved, your trusted partner for in-office tech support,
+          and website development. We help businesses streamline operations, stay secure, and
+          build a strong online presence with custom technology solutions.
+        </p>
+      </div>
       <SiteExamplesCarousel />
       <ContactForm />
     </main>
