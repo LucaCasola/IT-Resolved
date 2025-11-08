@@ -1,0 +1,21 @@
+{
+  "name": "IT Resolved - Business IT Solutions",
+  "short_name": "IT Resolved",
+  "description": "Your go-to IT solutions - Business IT Solutions Tailored for You",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#208042",
+  "scope": "/",
+  "orientation": "portrait-primary",
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en",
+  "dir": "ltr",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    }
+  ]
+}
