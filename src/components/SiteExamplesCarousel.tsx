@@ -24,6 +24,7 @@ import {
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -107,6 +108,9 @@ export default function SiteExamplesCarousel() {
                       <DialogContent className="w-full px-1.5 pb-1.5">
                         <DialogHeader>
                           <DialogTitle className="sr-only">Expand {website.title} image</DialogTitle>
+                          <DialogDescription className="sr-only">
+                            Full-length screenshot of {website.title} website.
+                          </DialogDescription>
                         </DialogHeader>
                           { website.title == "IT Resolved" ? (
                             <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted">
