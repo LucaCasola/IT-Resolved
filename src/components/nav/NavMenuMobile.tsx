@@ -53,7 +53,7 @@ export default function NavBarMobile({className}: {className?: string}) {
               <Collapsible>
                 <CollapsibleTrigger className={`${navigationMenuTriggerStyle()} navbar-heading w-full text-center`}>
                   Services
-                  <ChevronDownIcon className="relative top-[1px] ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" size={16}/>
+                  <ChevronDownIcon className="relative top-px ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" size={16}/>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <ul className="space-y-3 pl-10">
@@ -113,7 +113,7 @@ export default function NavBarMobile({className}: {className?: string}) {
             </NavigationMenuList>
           </NavigationMenu>
 
-          <Button variant="outline" className="mx-10" onClick={() => window.open("tel:416-523-5696")}>
+          <Button variant="outline" className="mx-auto" onClick={() => window.open("tel:416-523-5696")}>
             <div className="row">
               <Phone size={24} fill="black"/>
               <p className="text-lg">(416) 523-5696</p>
