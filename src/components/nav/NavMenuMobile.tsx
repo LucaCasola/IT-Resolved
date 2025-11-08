@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 import {
   NavigationMenu,
@@ -32,12 +33,12 @@ import { cn } from "@/lib/utils";
 
 export default function NavBarMobile({className}: {className?: string}) {
   return (
-    <header className={cn(className, "flex flex-row p-6 items-center")}>
+    <header className={cn(className, "flex items-center px-6 py-4 justify-around")}>
       <Sheet>
-        <SheetTrigger><Menu size={48}/></SheetTrigger>
-        <SheetHeader>
-          <SheetTitle className="sr-only">Nav menu</SheetTitle>
-          <SheetDescription className="sr-only">Mobile navigation menu</SheetDescription>
+        <SheetTrigger className="absolute left-4"><Menu size={48}/></SheetTrigger>
+        <SheetHeader className="sr-only">
+          <SheetTitle>Nav menu</SheetTitle>
+          <SheetDescription>Mobile navigation menu</SheetDescription>
         </SheetHeader>
         <SheetContent className="w-50 md:w-90 h-screen justify-between pt-10 pb-6 bg-primary-foreground" side={"left"}>
           <NavigationMenu viewport={false}>
@@ -58,16 +59,16 @@ export default function NavBarMobile({className}: {className?: string}) {
                 <CollapsibleContent>
                   <ul className="space-y-3 pl-10">
                     <li>
-                        <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/">Office Support</Link>
+                        <Link className="text-sm" href="/">Office Support</Link>
                     </li>
                     <li>
-                        <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/services/website-development">Website Development</Link>
+                        <Link className="text-sm" href="/services/website-development">Website Development</Link>
                     </li>
                     <li>
-                        <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/">Microsoft 365</Link>
+                        <Link className="text-sm" href="/">Microsoft 365</Link>
                     </li>
                     <li>
-                        <Link className="hover:[text-shadow:_1px_0_0_currentColor] text-sm" href="/">Remote Access</Link>
+                        <Link className="text-sm" href="/">Remote Access</Link>
                     </li>
                   </ul>
                 </CollapsibleContent>
@@ -77,7 +78,7 @@ export default function NavBarMobile({className}: {className?: string}) {
               <Collapsible>
                 <CollapsibleTrigger className={`${navigationMenuTriggerStyle()} navbar-heading w-full text-center`}>
                   Service Areas
-                  <ChevronDownIcon className="relative top-[1px] ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" size={16}/>
+                  <ChevronDownIcon className="relative top-px ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" size={16}/>
                 </CollapsibleTrigger>
                 <CollapsibleContent>
                   <ul className="space-y-3 pl-10">
@@ -123,7 +124,8 @@ export default function NavBarMobile({className}: {className?: string}) {
       </Sheet>
 
       {/* Home Page & Logo */}
-      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">
+      <Link className="row" href="/">
+        <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
         <h1 className="text-3xl font-bold whitespace-nowrap">IT Resolved</h1>
       </Link>
     </header>

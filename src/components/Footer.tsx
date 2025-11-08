@@ -10,15 +10,15 @@ export default function NavBarDesktop({className}: {className?: string}) {
   return (
     <footer className={cn(className, "flex justify-center")}>
       <div className="grid grid-cols-2 md:grid-cols-3 justify-self-center-safe justify-items-center gap-y-10 gap-x-10 mx:gap-y-0 md:gap-x-2 lg:gap-24 xl:gap-32 my-8 mx-4 md:mx-10">
-        <section className="section-footer">
+        <section className="footer-section">
           <h4>Services</h4>
           <p>Office Support</p>
-          <p><Link className="hover:[text-shadow:1px_0_0_currentColor]" href="/services/website-development">Website Development</Link></p>
+          <p><Link  href="/services/website-development">Website Development</Link></p>
           <p>Microsoft 365 Configuration</p>
           <p>Remote Access Configuration</p>
         </section>
 
-        <section className="section-footer">
+        <section className="footer-section">
           <h4>Areas</h4>
           <p>Toronto</p>
           <p>Vaughan</p>
@@ -27,7 +27,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
           <p>Richmond Hill</p>
         </section>
 
-        <section className="section-footer col-span-2 md:col-span-1">
+        <section className="footer-section col-span-2 md:col-span-1">
           <div className="row">
             <MapPin size={20} />
             <p>Vaughan, ON, L6A2A1, Canada</p>

@@ -18,9 +18,9 @@ export default function Home() {
       <div className="col">
         <h1>IT Resolved Home</h1>
         <p className="page-description">
-          Welcome to IT Resolved, your trusted partner for IT solutions, in-office tech support,
+          Welcome to IT Resolved, your trusted partner for in-office tech support,
           and website development. We help businesses streamline operations, stay secure, and
-          build a strong online presence with reliable, customized technology services.
+          build a strong online presence with custom technology solutions.
         </p>
       </div>
       <SiteExamplesCarousel />
