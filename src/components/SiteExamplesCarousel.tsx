@@ -24,6 +24,7 @@ import {
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -63,7 +64,7 @@ const websites: { title: string; link: string; linkText: string; description: st
     link: "github.com/LucaCasola/IT-Resolved",
     linkText: "repo",
     description:
-      `Business IT Solutions Tailored for You.`,
+      `Business IT Solutions website.`,
     descriptionBullets: [
       "Built with Next.js and Tailwind CSS",
       "UI components are from Shadcn UI",
@@ -78,7 +79,7 @@ const websites: { title: string; link: string; linkText: string; description: st
 export default function SiteExamplesCarousel() {
   return (
     <div className="w-full px-12 flex flex-col items-center justify-center">
-      <Carousel className="w-full max-w-md md:max-w-2xl lg:max-w-5xl">
+      <Carousel className="w-full max-w-md md:max-w-2xl lg:max-w-5xl xl:max-w-7xl">
         <h2 className="m-0 text-center md:ml-6 md:text-left mb-1">My Work</h2>
 
         <CarouselContent>
@@ -88,9 +89,9 @@ export default function SiteExamplesCarousel() {
                 <Card className="bg-primary-foreground h-full flex flex-col gap-6">
                   {/* Card Header (title & description) */}
                   <CardHeader className="flex-5 flex flex-col">
-                    <CardTitle>{website.title}</CardTitle>
+                    <CardTitle className="text-2xl">{website.title}</CardTitle>
                     <CardDescription>
-                      <p className="whitespace-pre-wrap mb-1">{website.description}</p>
+                      <p className="whitespace-pre-wrap mb-1 text-base italic">{website.description}</p>
                       <ul className="list-disc pl-5">
                         {website.descriptionBullets.map((bullet, index) => (
                           <li key={index}>{bullet}</li>
@@ -107,22 +108,40 @@ export default function SiteExamplesCarousel() {
                       <DialogContent className="w-full px-1.5 pb-1.5">
                         <DialogHeader>
                           <DialogTitle className="sr-only">Expand {website.title} image</DialogTitle>
+                          <DialogDescription className="sr-only">
+                            Full-length screenshot of {website.title} website.
+                          </DialogDescription>
                         </DialogHeader>
                           { website.title == "IT Resolved" ? (
                             <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted">
-                              <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill/>
+                              <Image 
+                                src={`/images/websites/${website.imageFolder}/4-3.jpg`} 
+                                alt={website.imageAlt} 
+                                fill 
+                                sizes="..."
+                              />
                             </AspectRatio>
                           ) : (
                             <ScrollArea className="h-120 md:h-[80vh] md:max-h-180 lg:max-h-260 ">
                               <AspectRatio ratio={4 / 9} className="w-full rounded-md bg-muted">
-                                <Image src={`/images/websites/${website.imageFolder}/4-9.jpg`} alt={website.imageAlt} fill/>
+                                <Image 
+                                  src={`/images/websites/${website.imageFolder}/4-9.jpg`}
+                                  alt={website.imageAlt}
+                                  fill
+                                  sizes="..."
+                                />
                               </AspectRatio>
                             </ScrollArea>
                           )}
                       </DialogContent>
                     </Dialog>
                     <AspectRatio ratio={4 / 3} className="w-full rounded-md bg-muted border-3 border-white">
-                      <Image src={`/images/websites/${website.imageFolder}/4-3.jpg`} alt={website.imageAlt} fill/>
+                      <Image 
+                        src={`/images/websites/${website.imageFolder}/4-3.jpg`} 
+                        alt={website.imageAlt}
+                        fill
+                        sizes="..."
+                      />
                     </AspectRatio>
                   </CardContent>
                   {/* Card Footer (website link) */}

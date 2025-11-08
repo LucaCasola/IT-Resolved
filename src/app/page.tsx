@@ -2,7 +2,8 @@
 
 import type { Metadata } from "next";
 
-import { ContactForm } from "@/components/ContactForm";
+import HeroBanner from "@/components/HeroBanner";
+import ContactForm from "@/components/ContactForm";
 import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";
 
 export const metadata: Metadata = {
@@ -12,9 +13,10 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <div className="flex flex-col justify-center font-sans pb-20 gap-16 pt-20">
+    <main className="mt-0">
+      <HeroBanner />
       <SiteExamplesCarousel />
       <ContactForm />
-    </div>
+    </main>
   );
 }
