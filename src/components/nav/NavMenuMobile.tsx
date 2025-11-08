@@ -13,6 +13,7 @@ import {
 import {
   Sheet,
   SheetContent,
+  SheetDescription,
   SheetHeader,
   SheetTitle,
   SheetTrigger,
@@ -36,6 +37,7 @@ export default function NavBarMobile({className}: {className?: string}) {
         <SheetTrigger><Menu size={48}/></SheetTrigger>
         <SheetHeader>
           <SheetTitle className="sr-only">Nav menu</SheetTitle>
+          <SheetDescription className="sr-only">Mobile navigation menu</SheetDescription>
         </SheetHeader>
         <SheetContent className="w-50 md:w-90 h-screen justify-between pt-10 pb-6 bg-primary-foreground" side={"left"}>
           <NavigationMenu viewport={false}>
