@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 import {
   NavigationMenu,
@@ -20,42 +21,43 @@ import { cn } from "@/lib/utils";
 
 export default function NavBarDesktop({className}: {className?: string}) {
   return (
-    <header className={cn("flex justify-center items-center py-4 px-1", className)}>
+    <header className={cn("flex justify-center items-center py-4", className)}>
       <div className="flex justify-center items-center">
         <NavigationMenu className="pr-10" viewport={false}>
           <NavigationMenuList className="gap-4 flex-wrap">
             {/* Home Page & Logo */}
-            <NavigationMenuItem className="mr-24">
+            <NavigationMenuItem className="xl:mr-20 xl:-ml-20">
               <NavigationMenuLink asChild>
-                <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">
-                  <h1 className="text-2xl  font-bold">IT Resolved</h1>
+                <Link className="row" href="/">
+                  <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
+                  <h1 className="text-3xl  font-bold">IT Resolved</h1>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             {/* Services */}
-            <NavigationMenuItem className="block">
-              <NavigationMenuTrigger className="navbar-heading">Services</NavigationMenuTrigger>
-              <NavigationMenuContent className="z-10">
-                <ul className="grid w-72 gap-2 px-4 py-1 z-10">
+            <NavigationMenuItem>
+              <NavigationMenuTrigger className="navbar-heading ">Services</NavigationMenuTrigger>
+              <NavigationMenuContent className="z-10 p-0">
+                <ul className="grid w-68 gap-1 px-2 py-1 z-10 text-lg bg-secondary-foreground/50">
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">Office Support</Link>
+                      <p>Office Support</p>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/services/website-development">Website Development</Link>
+                      <Link href="/services/website-development">Website Development</Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">Microsoft 365 Configuration</Link>
+                      <p>Microsoft 365 Configuration</p>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <Link className="hover:[text-shadow:_1px_0_0_currentColor]" href="/">Remote Access Configuration</Link>
+                      <p>Remote Access Configuration</p>
                     </NavigationMenuLink>
                   </li>
                 </ul>
@@ -65,8 +67,8 @@ export default function NavBarDesktop({className}: {className?: string}) {
             {/* Service Areas */}
             <NavigationMenuItem>
               <NavigationMenuTrigger className="navbar-heading">Service Areas</NavigationMenuTrigger>
-              <NavigationMenuContent className="z-10">
-                <ul className="grid w-36 gap-2 px-4 py-1 text-lg">
+              <NavigationMenuContent className="z-10 p-0">
+                <ul className="grid w-36 gap-2 px-4 py-3 text-lg bg-secondary-foreground/50">
                   <li>
                     <p>Toronto</p>
                   </li>

@@ -6,10 +6,8 @@ import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 export default function HeroBanner() {
   return (
     <section className="relative">
-      <div className="absolute z-8 inset-0 bg-gray-700 opacity-40 rounded-md"></div>
-      <div className="absolute z-9 inset-0 flex items-center justify-center">
-        <h1 className="text-white">Your IT Issues Resolved</h1>
-      </div>
+      <div className="absolute z-8 inset-0 bg-gray-700 opacity-40"></div>
+      <h2 className="absolute z-9 inset-0 flex items-center justify-center text-white font-bold italic text-center text-3xl md:text-4xl lg:text-4xl xl:text-6xl">Your IT Issues Resolved</h2>
       <AspectRatio ratio={16 / 7}>
         <Image
           src="/images/it-resolved-hero.jpg"
