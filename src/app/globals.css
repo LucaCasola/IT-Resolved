@@ -169,7 +169,7 @@
 /* Priority 2 */
 @layer components {
   .navbar-heading {
-    @apply !bg-transparent !text-xl;
+    @apply bg-transparent! text-xl!;
   }
   
   .footer-section {
@@ -189,5 +189,9 @@
 
   .col {
     @apply flex flex-col items-center gap-y-3;
+  }
+
+  .responsive-width {
+    @apply w-9/10 md:w-3/5 max-w-7xl;
   }
 }
