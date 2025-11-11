@@ -80,7 +80,7 @@ export default function SiteExamplesCarousel() {
   return (
     <div className="w-full px-12 flex flex-col items-center justify-center">
       <Carousel className="w-full max-w-md md:max-w-2xl lg:max-w-5xl xl:max-w-7xl">
-        <h2 className="m-0 text-center md:ml-6 md:text-left mb-1">My Work</h2>
+        <h2>Featured Portfolio</h2>
 
         <CarouselContent>
           {websites.map((website) => (
