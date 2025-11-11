@@ -169,7 +169,7 @@
 /* Priority 2 */
 @layer components {
   .navbar-heading {
-    @apply !bg-transparent !text-xl;
+    @apply bg-transparent! text-xl!;
   }
   
   .footer-section {
