@@ -2,6 +2,9 @@
 
 import type { Metadata } from "next";
 
+// components import
+import ImageWithText from "@/components/ImageWithText";
+
 export const metadata: Metadata = {
   title: "About | IT Resolved",
   description: `Discover who we are at IT Resolved, a local team providing dependable IT 
@@ -18,6 +21,7 @@ export default function About() {
           website development services tailored to meet the unique needs of local businesses.
         </p>
       </div>
+      <ImageWithText />
     </main>
   );
 }
