@@ -40,13 +40,13 @@ export default function FAQ() {
       <Accordion
         type="single"
         collapsible
-        className="w-9/10 md:w-3/5 max-w-7xl flex flex-col gap-y-4"
+        className="col responsive-width"
       >
         {faqs.map((faq, index) => (
           <AccordionItem 
             key={index}
             value={`item-${index}`}
-            className={`shadow rounded-xl pl-4 ${index % 2 === 0 ? 'bg-white/80' : 'bg-white/80'}`}
+            className={`w-full shadow rounded-xl pl-4 ${index % 2 === 0 ? 'bg-white/80' : 'bg-white/80'}`}
           >
             <AccordionTrigger className="justify-start">
               <h3>{faq.question}</h3>

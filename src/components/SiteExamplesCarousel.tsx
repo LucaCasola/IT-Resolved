@@ -88,12 +88,12 @@ export default function SiteExamplesCarousel() {
               <div className="p-1 h-full">
                 <Card className="bg-primary-foreground h-full flex flex-col gap-6">
                   {/* Card Header (title & description) */}
-                  <CardHeader className="flex-5 flex flex-col">
-                    <CardTitle className="text-2xl">
+                  <CardHeader className="flex-5 col">
+                    <CardTitle className="row">
                       <h3>{website.title}</h3>
                     </CardTitle>
                     <CardDescription>
-                      <p className="whitespace-pre-wrap mb-1 text-base italic">{website.description}</p>
+                      <p className="whitespace-pre-wrap mb-2 text-base text-balance text-center">{website.description}</p>
                       <ul className="list-disc pl-5">
                         {website.descriptionBullets.map((bullet, index) => (
                           <li key={index}>{bullet}</li>
