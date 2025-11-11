@@ -56,7 +56,7 @@ const formVariants = cva(
   {
     variants: {
       variant: {
-        default: "w-full p-6",
+        default: "w-full col py-12",
         contained: "p-4 md:p-10 border-6 rounded-4xl ",
       }
     },
@@ -128,7 +128,7 @@ export default function ContactForm({
     <form onSubmit={handleSubmit(onSubmit)} 
       className={cn(formVariants({ variant, className }))}
     >
-      <FieldSet className="md:w-3xl mx-auto">
+      <FieldSet className="w-9/10 md:w-xl lg:w-3xl">
         <FieldLegend className="!text-2xl font-bold">Contact Me</FieldLegend>
         <FieldDescription>
           Have any questions or looking for a quote? Fill out the form below and I'll be in touch within the day.
