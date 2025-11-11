@@ -138,29 +138,32 @@
 
   /* Header element defaults */
   h1 {
-    @apply text-4xl font-bold text-foreground;
+    @apply text-5xl font-bold text-foreground;
   }
   
   h2 {
-    @apply text-3xl font-semibold text-accent-foreground;
+    @apply text-4xl font-semibold text-accent-foreground text-center mb-12;
   }
   
   h3 {
-    @apply text-2xl font-semibold text-foreground;
+    @apply text-xl md:text-2xl font-semibold text-foreground;
   }
   
   h4 {
-    @apply text-xl font-medium text-foreground;
+    @apply text-2xl font-medium text-foreground;
   }
   
   h5 {
-    @apply text-lg font-medium text-foreground;
+    @apply text-xl font-medium text-foreground;
   }
   
   h6 {
-    @apply text-base font-medium text-foreground;
+    @apply text-lg font-medium text-foreground;
   }
   
+  p {
+    @apply text-base;
+  }
 }
 
 /* Priority 2 */
