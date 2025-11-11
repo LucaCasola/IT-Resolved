@@ -89,7 +89,9 @@ export default function SiteExamplesCarousel() {
                 <Card className="bg-primary-foreground h-full flex flex-col gap-6">
                   {/* Card Header (title & description) */}
                   <CardHeader className="flex-5 flex flex-col">
-                    <CardTitle className="text-2xl">{website.title}</CardTitle>
+                    <CardTitle className="text-2xl">
+                      <h3>{website.title}</h3>
+                    </CardTitle>
                     <CardDescription>
                       <p className="whitespace-pre-wrap mb-1 text-base italic">{website.description}</p>
                       <ul className="list-disc pl-5">
