@@ -132,7 +132,7 @@
     @apply w-full;
   }
 
-  a {
+  a, .button-link {
     @apply hover:[text-shadow:1px_0_0_currentColor];
   }
 
