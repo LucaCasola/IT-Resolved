@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 
-// components import
+// components
 import ImageWithText from "@/components/ImageWithText";
 
 export const metadata: Metadata = {

@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 
-// components import
+// components
 import HeroBanner from "@/components/HeroBanner";
 import ContactForm from "@/components/ContactForm";
 import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";

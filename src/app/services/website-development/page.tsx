@@ -2,13 +2,14 @@
 
 import type { Metadata } from "next";
 
+// components
 import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";
 
 export const metadata: Metadata = {
   title: "Web Development Services | IT Resolved",
   description: "Information about Website Development services offered by IT Resolved",
 };
-      //<div className="flex flex-col items-center justify-center">
+
 export default function WebsiteDevelopment() {
   return (
     <main>
