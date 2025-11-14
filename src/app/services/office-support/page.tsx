@@ -13,7 +13,8 @@ export default function OfficeSupport() {
       <div className="col">
         <h1>Office Support</h1>
         <p className="page-description">
-          A
+          Looking for general office support? I can help with that! Whether you need assistance with software 
+          installation, troubleshooting, connecting that pesky printer, or migrating your data, I'm here to help.
         </p>
       </div>
     </main>
