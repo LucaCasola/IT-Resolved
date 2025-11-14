@@ -17,7 +17,11 @@ export default function RemoteAccess() {
           remote access solution to ensure your employees can work efficiently from home.
         </p>
       </div>
-      <h2>Different Remote Access Solutions</h2>
+      <section>
+        <h2>Different Remote Access Solutions</h2>
+        
+
+      </section>
     </main>
   );
 }
