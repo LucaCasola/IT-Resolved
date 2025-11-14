@@ -23,8 +23,7 @@ const imageVariants = cva(
 export default function ImageWithText({imgPath, alt, bodyText, variant} :  {imgPath: string, alt?: string, bodyText: string} & VariantProps<typeof imageVariants>
 ) {
   return (
-    <section className="col responsive-width gap-y-3">
-      <h2>About Me</h2>
+    <div className="col responsive-width gap-y-3">
       <div className="grid grid-cols-2 gap-x-12 items-center justify-items-center">
         <div className="w-3/4 md:w-full col-span-2 md:col-span-1">
           <AspectRatio ratio={1 / 1}>
@@ -41,6 +40,6 @@ export default function ImageWithText({imgPath, alt, bodyText, variant} :  {imgP
           {bodyText}
         </p>
       </div>
-    </section>
+    </div>
   )
 }
