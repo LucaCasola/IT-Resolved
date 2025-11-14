@@ -20,7 +20,7 @@ const imageVariants = cva(
   }
 )
 
-export default function ImageWithText({imgPath, bodyText, variant} :  {imgPath: string, bodyText: string} & VariantProps<typeof imageVariants>
+export default function ImageWithText({imgPath, alt, bodyText, variant} :  {imgPath: string, alt?: string, bodyText: string} & VariantProps<typeof imageVariants>
 ) {
   return (
     <section className="col responsive-width gap-y-3">
@@ -30,7 +30,7 @@ export default function ImageWithText({imgPath, bodyText, variant} :  {imgPath: 
           <AspectRatio ratio={1 / 1}>
             <Image
               src={imgPath}
-              alt="A really cool guy dressed in stylish clothes"
+              alt={`${alt}`}
               className={cn(imageVariants({ variant }))}
               fill
               sizes="..."

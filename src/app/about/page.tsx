@@ -23,9 +23,11 @@ export default function About() {
       </div>
       <ImageWithText 
         imgPath="/images/really-cool-guy.jpg" 
+        alt="A really cool guy dressed in stylish clothes"
         bodyText="Hi, I'm Luca, the owner and lead technician at IT Resolved. With an Honours Bachelor of Technology in Software 
           Development and over 7 years of experience, my passion lies in helping people take full advantage of technology."
-        variant="circle" />
+        variant="circle" 
+      />
     </main>
   );
 }
