@@ -21,7 +21,11 @@ export default function About() {
           website development services tailored to meet the unique needs of local businesses.
         </p>
       </div>
-      <ImageWithText />
+      <ImageWithText 
+        imgPath="/images/really-cool-guy.jpg" 
+        bodyText="Hi, I'm Luca, the owner and lead technician at IT Resolved. With an Honours Bachelor of Technology in Software 
+          Development and over 7 years of experience, my passion lies in helping people take full advantage of technology."
+        variant="circle" />
     </main>
   );
 }
