@@ -42,7 +42,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
                 <ul className="grid w-68 gap-1 px-2 py-1 z-10 text-lg bg-secondary-foreground/50">
                   <li>
                     <NavigationMenuLink asChild>
-                      <p>Office Support</p>
+                      <Link href="/services/office-support">Office Support</Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
@@ -52,12 +52,12 @@ export default function NavBarDesktop({className}: {className?: string}) {
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <p>Microsoft 365 Configuration</p>
+                      <Link href="/services/microsoft-365">Microsoft 365 Configuration</Link>
                     </NavigationMenuLink>
                   </li>
                   <li>
                     <NavigationMenuLink asChild>
-                      <p>Remote Access Configuration</p>
+                      <Link href="/services/remote-access">Remote Access Configuration</Link>
                     </NavigationMenuLink>
                   </li>
                 </ul>
