@@ -21,6 +21,7 @@ export default function Microsoft365() {
         </p>
       </div>
       <section className="col responsive-width gap-y-3">
+        <h2>Microsoft 365 For Business</h2>
         <AspectRatio ratio={16 / 9} className="overflow-hidden">
           <Image 
             src="/images/microsoft-365-group.jpg" 
@@ -29,6 +30,10 @@ export default function Microsoft365() {
             sizes="..."
           />
         </AspectRatio>
+        <p className="text-balance text-center">
+          Microsoft 365 Business is a powerful suite of productivity tools that includes applications like Word, Excel, PowerPoint, Outlook, Teams, and OneDrive. 
+          It offers cloud-based services that help with collaboration, communication, and efficient workflow management.
+        </p>
       </section>
     </main>
   );
