@@ -31,7 +31,15 @@ import {
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
 
-const websites: { title: string; link: string; linkText: string; description: string; descriptionBullets: string[]; imageFolder: string; imageAlt: string }[] = [
+const websites: { 
+  title: string; 
+  link: string; 
+  linkText: string; 
+  description: string; 
+  descriptionBullets: string[]; 
+  imageFolder: string; 
+  imageAlt: string 
+}[] = [
   {
     title: "Leather Treaty Sports",
     link: "leathertreatysports.com",
