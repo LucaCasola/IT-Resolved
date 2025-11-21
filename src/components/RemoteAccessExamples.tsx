@@ -35,22 +35,22 @@ export default function RemoteAccessExamples() {
   return (
     <section className="col responsive-width gap-y-3">
         <h2>Different Remote Access Solutions</h2>
-        <div className="grid grid-cols-3 gap-6 mx-6 justify-items-center items-center">
           {softwares.map((software) => (
-            <div key={software.title}>
+            <div key={software.title} className="col">
               <h3>{software.title}</h3>
-              <AspectRatio ratio={1 / 1} className="overflow-hidden">
-                <Image 
-                  src={`/images/remote-access/${software.imageName}`} 
-                  alt={software.imageAlt} 
-                  fill
-                  sizes="..."
-                />
-              </AspectRatio>
-              <p className="text-balance text-center">{software.description}</p>
+              <div className="grid grid-cols-2 gap-x-12 items-center justify-items-center">
+                <AspectRatio ratio={1 / 1}>
+                  <Image 
+                    src={`/images/remote-access/${software.imageName}`} 
+                    alt={software.imageAlt} 
+                    fill
+                    sizes="..."
+                  />
+                </AspectRatio>
+                <p className="text-balance text-center">{software.description}</p>
+              </div>
             </div>
           ))}
-        </div>
       </section>
   );
 }
