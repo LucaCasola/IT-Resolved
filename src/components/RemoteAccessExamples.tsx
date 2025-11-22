@@ -28,7 +28,7 @@ const softwares: {
 export default function RemoteAccessExamples() {
   return (
     <section className="col responsive-width gap-y-3">
-      <h2>Different Remote Access Solutions</h2>
+      <h2>Remote Access Solutions</h2>
       <div className="grid grid-cols-3 gap-16">
         {softwares.map((software) => (
           <div key={software.title} className="col text-center">
