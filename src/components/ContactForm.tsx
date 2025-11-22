@@ -49,8 +49,6 @@ const formSchema = z.object({
 
 type FormData = z.infer<typeof formSchema>
 
-//w-full p-6
-
 const formVariants = cva(
   "bg-primary-foreground",
   {

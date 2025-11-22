@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 
+// components
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
