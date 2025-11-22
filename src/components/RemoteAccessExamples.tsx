@@ -10,17 +10,17 @@ const softwares: {
 }[] = [
   {
     title: "ScreenConnect",
-    imageName: "ScreenConnect-Logo.png",
+    imageName: "ScreenConnect-logo.png",
     imageAlt: "ScreenConnect Logo",
   },
   {
     title: "TeamViewer",
-    imageName: "TeamViewer-Logo.png",
+    imageName: "TeamViewer-logo.png",
     imageAlt: "TeamViewer Logo",
   },
   {
     title: "Chrome Remote Desktop",
-    imageName: "Chrome-Remote-Desktop-Logo.png",
+    imageName: "Chrome-Remote-Desktop-logo.png",
     imageAlt: "Chrome Remote Desktop Logo",
   },
 ]
