@@ -1,5 +1,9 @@
 // src/components/DeviceSupportIcons.tsx
 
+"use client"
+
+import { useState } from "react"
+
 import {
   HoverCard,
   HoverCardContent,
@@ -37,27 +41,35 @@ const services: {
 ]
 
 export default function HoverIcons() {
-  const strokeWidth = 1.5;
-  const size = 100;
-
   return (
     <section className="responsive-width">
       <div className="grid gap-y-4 grid-cols-2 md:grid-cols-4 justify-items-center">
-        {services.map((service) => (
-          <HoverCard key={service.title}>
-            <HoverCardTrigger asChild>
-              <div className="gap-y-0! col w-40 md:w-30 lg:w-40 py-3 justify-evenly bg-accent border-3 rounded-4xl hover:shadow-xl group">
-                <service.icon size={size} strokeWidth={strokeWidth}/>
-                <h3 className="text-center group-hover:underline">{service.title}</h3>
-              </div>
-            </HoverCardTrigger>
-            <HoverCardContent className="w-80">
-              <p className="text-center">
-                {service.description}
-              </p>
-            </HoverCardContent>
-          </HoverCard>
-        ))}
+        {services.map((service) => {
+          const [isOpen, setIsOpen] = useState(false);
+
+          return (
+            <HoverCard 
+              key={service.title}
+              open={isOpen}
+              onOpenChange={setIsOpen}
+            >
+              <HoverCardTrigger asChild>
+                <div 
+                  className="gap-y-0! col w-40 py-3 justify-evenly bg-accent border-3 rounded-4xl hover:shadow-xl group"
+                  onClick={() => setIsOpen(!isOpen)}  
+                >
+                  <service.icon strokeWidth={1.5} className="size-20"/>
+                  <h3 className="text-center group-hover:underline">{service.title}</h3>
+                </div>
+              </HoverCardTrigger>
+              <HoverCardContent className="w-80">
+                <p className="text-center">
+                  {service.description}
+                </p>
+              </HoverCardContent>
+            </HoverCard>
+          );
+        })}
       </div>
     </section>
   )
