@@ -192,6 +192,6 @@
   }
 
   .responsive-width {
-    @apply w-9/10 md:w-3/5 max-w-7xl;
+    @apply w-9/10 md:w-full lg:w-3/5 max-w-7xl;
   }
 }
