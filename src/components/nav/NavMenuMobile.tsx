@@ -126,7 +126,7 @@ export default function NavBarMobile({className}: {className?: string}) {
       {/* Home Page & Logo */}
       <Link className="row" href="/">
         <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
-        <h1 className="text-3xl font-bold whitespace-nowrap">IT Resolved</h1>
+        <span className="text-3xl font-bold whitespace-nowrap">IT Resolved</span>
       </Link>
     </header>
   )
