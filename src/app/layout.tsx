@@ -33,7 +33,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <link rel="icon" href="/favicon.ico" sizes="any"/>
+        <link rel="icon" href="/images/icon.ico" sizes="any"/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <NavController className="bg-secondary-foreground" />
