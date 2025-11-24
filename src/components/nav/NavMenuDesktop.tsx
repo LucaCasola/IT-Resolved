@@ -30,7 +30,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
               <NavigationMenuLink asChild>
                 <Link className="row" href="/">
                   <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
-                  <h1 className="text-3xl  font-bold">IT Resolved</h1>
+                  <span className="text-3xl font-bold">IT Resolved</span>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>

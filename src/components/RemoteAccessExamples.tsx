@@ -1,4 +1,4 @@
-// src/app/components/SiteExamplesCarousel.tsx
+// src/app/components/RemoteAccessExamples.tsx
 
 import Image from "next/image"
 import { AspectRatio } from "@/components/ui/aspect-ratio";
