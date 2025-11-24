@@ -12,7 +12,6 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-
 import { Button } from "../ui/button"
 
 import { Phone } from 'lucide-react';  // Icons
@@ -20,8 +19,10 @@ import { cn } from "@/lib/utils";
 
 
 export default function NavBarDesktop({className}: {className?: string}) {
-  return (
-    <header className={cn("flex justify-center items-center py-4", className)}>
+   const isSticky : Boolean = true
+  
+   return (
+    <header className={cn(`flex justify-center items-center py-4 ${isSticky && "navbar-sticky"}`, className)}>
       <div className="flex justify-center items-center">
         <NavigationMenu className="pr-10" viewport={false}>
           <NavigationMenuList className="gap-4 flex-wrap">

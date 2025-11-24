@@ -171,6 +171,10 @@
   .navbar-heading {
     @apply bg-transparent! text-xl!;
   }
+
+  .navbar-sticky {
+    @apply sticky top-0 left-0 z-10;
+  }
   
   .footer-section {
     @apply w-auto flex flex-col justify-between;

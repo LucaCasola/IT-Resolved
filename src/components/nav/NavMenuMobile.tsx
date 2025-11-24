@@ -32,8 +32,11 @@ import { cn } from "@/lib/utils";
 
 
 export default function NavBarMobile({className}: {className?: string}) {
+  const isSticky : Boolean = true
+
   return (
-    <header className={cn(className, "flex items-center px-6 py-4 justify-around")}>
+    <header className={cn(className, `flex items-center px-6 py-4 justify-around ${isSticky && "navbar-sticky"}` )}>
+      {/* Mobile Menu Sheet */}
       <Sheet>
         <SheetTrigger className="absolute left-4"><Menu size={48}/></SheetTrigger>
         <SheetHeader className="sr-only">
