@@ -1,5 +1,6 @@
 // src/components/FAQ.tsx
 
+// UI components from shadcn/ui
 import {
   Accordion,
   AccordionContent,

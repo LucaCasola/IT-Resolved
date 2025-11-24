@@ -2,6 +2,9 @@
 
 "use client"
 
+// UI components from shadcn/ui
+import { cn } from "@/lib/utils"
+import { cva, type VariantProps } from "class-variance-authority"
 import {
   Field,
   FieldDescription,
@@ -12,17 +15,14 @@ import {
   FieldSeparator,
   FieldSet,
 } from "@/components/ui/field"
-
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { cn } from "@/lib/utils"
 import { Button } from "./ui/button"
-import { cva, type VariantProps } from "class-variance-authority"
 
+// Form validation and functionality
 import * as z from "zod"
 import { useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
-
 import emailjs from '@emailjs/browser';
 
 const phoneRegex = new RegExp(

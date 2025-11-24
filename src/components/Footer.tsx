@@ -3,13 +3,24 @@
 "use client";
 
 import Link from "next/link"
+
+// UI components from shadcn/ui
 import { cn } from '@/lib/utils';
-import { MapPin, Clock, Phone, PhoneCall, Mail, MailOpen } from 'lucide-react';  // Icons
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+
+// Icons
+import { 
+  MapPin,
+  Clock,
+  Phone,
+  PhoneCall,
+  Mail,
+  MailOpen 
+} from 'lucide-react';
 
 export default function NavBarDesktop({className}: {className?: string}) {
   return (

@@ -1,8 +1,12 @@
+// src/components/nav/NavMenuDesktop.tsx
+
 "use client"
 
 import Link from "next/link"
 import Image from "next/image"
 
+// UI components from shadcn/ui
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -15,7 +19,6 @@ import {
 import { Button } from "../ui/button"
 
 import { Phone } from 'lucide-react';  // Icons
-import { cn } from "@/lib/utils";
 
 
 export default function NavBarDesktop({className}: {className?: string}) {

@@ -1,16 +1,19 @@
+// src/components/nav/NavMenuMobile.tsx
+
 "use client"
 
 import Link from "next/link"
 import Image from "next/image"
 
-import {
+// UI components from shadcn/ui
+import { cn } from "@/lib/utils";
+import { 
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-
 import {
   Sheet,
   SheetContent,
@@ -19,16 +22,14 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-
 import { Button } from "../ui/button"
-import { Phone, Menu, ChevronDownIcon } from 'lucide-react';  // Icons
-import { cn } from "@/lib/utils";
+
+import { Phone, Menu, ChevronDownIcon } from 'lucide-react'; // Icons
 
 
 export default function NavBarMobile({className}: {className?: string}) {

@@ -1,8 +1,8 @@
 // src/app/components/SiteExamplesCarousel.tsx
 
 import Image from "next/image"
-import { Maximize, ChevronRightIcon } from 'lucide-react';  // Icons
 
+// UI components from shadcn/ui
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Button } from "@/components/ui/button"
 import {
@@ -30,6 +30,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
+
+import { Maximize, ChevronRightIcon } from 'lucide-react';  // Icons
 
 const websites: { 
   title: string; 
