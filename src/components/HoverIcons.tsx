@@ -37,27 +37,7 @@ const services: {
     icon: CloudUpload,
     title: "File Backup",
     description: "Backup your important files to a cloud storage solution like OneDrive, or to an external hard drive.",
-  },
-  {
-    icon: CloudUpload,
-    title: "Software Installation",
-    description: "Install and configure software applications needed for your business operations.",
-  },
-  {
-    icon: CloudUpload,
-    title: "a",
-    description: "Backup your important files to a cloud storage solution like OneDrive, or to an external hard drive.",
-  },
-  {
-    icon: CloudUpload,
-    title: "bp",
-    description: "Backup your important files to a cloud storage solution like OneDrive, or to an external hard drive.",
-  },
-  {
-    icon: CloudUpload,
-    title: "c",
-    description: "Backup your important files to a cloud storage solution like OneDrive, or to an external hard drive.",
-  },
+  }
 ]
 
 export default function HoverIcons() {
