@@ -2,7 +2,7 @@
 
 import type { Metadata } from "next";
 
-// components
+// Custom component
 import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {

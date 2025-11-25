@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 
+// UI components from shadcn/ui
 import HoverIcons from "@/components/HoverIcons";
 
 export const metadata: Metadata = {
