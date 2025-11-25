@@ -10,6 +10,13 @@ import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import { ChevronDownIcon } from "lucide-react";  // Icon
 
 export default function HeroBanner() {
+  const scrollToContent = () => {
+    var element = document.getElementById("scrollto");
+    if (element) {
+      element.scrollIntoView({block: "start", behavior: 'smooth'});
+    }
+  }
+
   return (
     <section className="relative md:h-screen max-h-300">
       <div className="absolute z-8 inset-0 bg-gray-700 opacity-40"></div>
@@ -20,12 +27,7 @@ export default function HeroBanner() {
           aria-hidden="true" 
           color="white" 
           strokeWidth={2.4}
-          onClick={() => {
-            var element = document.getElementById("scrollto");
-            if (element) {
-              element.scrollIntoView({block: "start", behavior: 'smooth'});
-            }
-          }}
+          onClick={() => { scrollToContent() }}
         />
       </div>
       <AspectRatio ratio={16 / 7} className="md:h-screen max-h-300">
