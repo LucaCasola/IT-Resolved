@@ -30,8 +30,8 @@ export default function NavBarDesktop({className}: {className?: string}) {
           <h4>Services</h4>
           <p><Link href="/services/office-support">Office Support</Link></p>
           <p><Link href="/services/website-development">Website Development</Link></p>
-          <p><Link href="/services/microsoft-365">Microsoft 365 Configuration</Link></p>
-          <p><Link href="/services/remote-access">Remote Access Configuration</Link></p>
+          <p><Link href="/services/microsoft-365">Microsoft 365</Link></p>
+          <p><Link href="/services/remote-access">Remote Access</Link></p>
         </section>
 
         <section className="footer-section">
