@@ -2,6 +2,9 @@
 
 import type { Metadata } from "next";
 
+// Custom component
+import ServiceAreasMap from "@/components/ServiceAreasMap";
+
 export const metadata: Metadata = {
   title: "Service Areas | IT Resolved",
   description: "Discover the service areas covered by IT Resolved for IT support and web development.",
@@ -9,13 +12,15 @@ export const metadata: Metadata = {
 
 export default function ServiceAreas() {
   return (
-    <main>
+    <main className="grow gap-y-2! md:gap-y-6!">
       <div className="col">
         <h1>Service Areas</h1>
         <p className="page-description">
-          I provide services for businesses in the Greater Toronto Area.
+          I provide services for businesses in the Greater Toronto Area which includes Toronto, 
+          Vaughan, Mississauga, Brampton, Markham, Richmond Hill, and surrounding regions. 
         </p>
       </div>
+      <ServiceAreasMap />
     </main>
   );
 }
