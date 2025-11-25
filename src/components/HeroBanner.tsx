@@ -11,7 +11,7 @@ import { ChevronDownIcon } from "lucide-react";  // Icon
 
 export default function HeroBanner() {
   return (
-    <section className="relative md:h-screen">
+    <section className="relative md:h-screen max-h-300">
       <div className="absolute z-8 inset-0 bg-gray-700 opacity-40"></div>
       <div className="absolute inset-0 z-9 col justify-center">
         <h2 className="text-white m-0! font-bold italic text-3xl md:text-4xl lg:text-4xl xl:text-6xl">Your IT Issues Resolved</h2>
@@ -28,11 +28,11 @@ export default function HeroBanner() {
           }}
         />
       </div>
-      <AspectRatio ratio={16 / 7} className="md:h-screen">
+      <AspectRatio ratio={16 / 7} className="md:h-screen max-h-300">
         <Image
-          src="/images/it-resolved-hero.jpg"
+          src="/images/hero-banner.jpg"
           alt="IT Resolved Hero Image"
-          className="object-cover"
+          className="object-cover md:h-screen max-h-300"
           fill
           sizes="..."
         />
