@@ -165,6 +165,7 @@
     @apply text-base;
   }
   
+  /* Leaflet map customizations */
   .leaflet-container {
     @apply !bg-card !font-[inherit];
   }

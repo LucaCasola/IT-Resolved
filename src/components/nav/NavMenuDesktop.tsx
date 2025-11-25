@@ -32,7 +32,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
             {/* Home Page & Logo */}
             <NavigationMenuItem className="xl:mr-20 xl:-ml-20">
               <NavigationMenuLink asChild>
-                <Link className="row" href="/">
+                <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
                   <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
                   <span className="text-3xl font-bold">IT Resolved</span>
                 </Link>

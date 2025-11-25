@@ -63,16 +63,16 @@ export default function NavBarMobile({className}: {className?: string}) {
                 <CollapsibleContent>
                   <ul className="space-y-3 pl-10">
                     <li>
-                        <Link className="text-sm" href="/services/office-support">Office Support</Link>
+                      <Link className="text-sm" href="/services/office-support">Office Support</Link>
                     </li>
                     <li>
-                        <Link className="text-sm" href="/services/website-development">Website Development</Link>
+                      <Link className="text-sm" href="/services/website-development">Website Development</Link>
                     </li>
                     <li>
-                        <Link className="text-sm" href="/services/microsoft-365">Microsoft 365</Link>
+                      <Link className="text-sm" href="/services/microsoft-365">Microsoft 365</Link>
                     </li>
                     <li>
-                        <Link className="text-sm" href="/services/remote-access">Remote Access</Link>
+                      <Link className="text-sm" href="/services/remote-access">Remote Access</Link>
                     </li>
                   </ul>
                 </CollapsibleContent>
@@ -111,7 +111,7 @@ export default function NavBarMobile({className}: {className?: string}) {
       </Sheet>
 
       {/* Home Page & Logo */}
-      <Link className="row" href="/">
+      <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
         <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
         <span className="text-3xl font-bold whitespace-nowrap">IT Resolved</span>
       </Link>
