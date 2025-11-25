@@ -17,7 +17,7 @@ export default function Home() {
   return (
     <main className="mt-0">
       <HeroBanner />
-      <div id="scrollto" className="col scroll-mt-10">
+      <div id="scrollto" className="col scroll-mt-28">
         <h1>IT Resolved Home</h1>
         <p className="page-description">
           Welcome to IT Resolved, your trusted partner for in-office tech support
