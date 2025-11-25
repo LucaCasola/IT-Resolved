@@ -8,10 +8,10 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-const faqs: { question: string; answer: String; }[] = [
+const faqs: { question: string; answer: string; }[] = [
   {
     question: "How do we get in touch when we need support?",
-    answer: `You can contact me by phone (416) 523-5696 or email support@itresolved.ca. I'll quickly respond to help keep your IT services running smoothly.`
+    answer: `You can contact me by phone (416-523-5696) or email (support@itresolved.ca). I respond quickly to help keep your IT services running smoothly.`
   },
   {
     question: "When I phone, will I speak directly to a technician who can help?",
@@ -53,7 +53,7 @@ export default function FAQ() {
               <h3>{faq.question}</h3>
             </AccordionTrigger>
             <AccordionContent className="flex flex-col gap-4 text-balance">
-              <pre className="px-4 text-base text-wrap">{faq.answer}</pre>
+              <pre className="px-4 text-base font-mono font-medium text-wrap">{faq.answer}</pre>
             </AccordionContent>
           </AccordionItem>
         ))}
