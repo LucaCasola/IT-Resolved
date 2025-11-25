@@ -1,8 +1,12 @@
+// src/components/nav/NavMenuDesktop.tsx
+
 "use client"
 
 import Link from "next/link"
 import Image from "next/image"
 
+// UI components from shadcn/ui
+import { cn } from "@/lib/utils";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -12,23 +16,23 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-
 import { Button } from "../ui/button"
 
 import { Phone } from 'lucide-react';  // Icons
-import { cn } from "@/lib/utils";
 
 
 export default function NavBarDesktop({className}: {className?: string}) {
-  return (
-    <header className={cn("flex justify-center items-center py-4", className)}>
+   const isSticky : Boolean = true
+  
+   return (
+    <header className={cn(`flex justify-center items-center py-4 ${isSticky && "navbar-sticky"}`, className)}>
       <div className="flex justify-center items-center">
         <NavigationMenu className="pr-10" viewport={false}>
           <NavigationMenuList className="gap-4 flex-wrap">
             {/* Home Page & Logo */}
             <NavigationMenuItem className="xl:mr-20 xl:-ml-20">
               <NavigationMenuLink asChild>
-                <Link className="row" href="/">
+                <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
                   <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
                   <span className="text-3xl font-bold">IT Resolved</span>
                 </Link>
@@ -66,26 +70,9 @@ export default function NavBarDesktop({className}: {className?: string}) {
 
             {/* Service Areas */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="navbar-heading">Service Areas</NavigationMenuTrigger>
-              <NavigationMenuContent className="z-10 p-0">
-                <ul className="grid w-36 gap-2 px-4 py-3 text-lg bg-secondary-foreground/50">
-                  <li>
-                    <p>Toronto</p>
-                  </li>
-                  <li>
-                    <p>Vaughan</p>
-                  </li>
-                  <li>
-                    <p>Mississauga</p>
-                  </li>
-                  <li>
-                    <p>Markham</p>
-                  </li>
-                  <li>
-                    <p>Richmond Hill</p>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+              <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} navbar-heading`}>
+                <Link href="/service-areas">Service Areas</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
 
             {/* About */}

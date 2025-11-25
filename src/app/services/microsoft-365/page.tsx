@@ -3,6 +3,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 
+// UI component from shadcn/ui
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 export const metadata: Metadata = {

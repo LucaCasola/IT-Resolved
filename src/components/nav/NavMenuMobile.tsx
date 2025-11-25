@@ -1,16 +1,19 @@
+// src/components/nav/NavMenuMobile.tsx
+
 "use client"
 
 import Link from "next/link"
 import Image from "next/image"
 
-import {
+// UI components from shadcn/ui
+import { cn } from "@/lib/utils";
+import { 
   NavigationMenu,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-
 import {
   Sheet,
   SheetContent,
@@ -19,21 +22,22 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet"
-
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible"
-
 import { Button } from "../ui/button"
-import { Phone, Menu, ChevronDownIcon } from 'lucide-react';  // Icons
-import { cn } from "@/lib/utils";
+
+import { Phone, Menu, ChevronDownIcon } from 'lucide-react'; // Icons
 
 
 export default function NavBarMobile({className}: {className?: string}) {
+  const isSticky : Boolean = true
+
   return (
-    <header className={cn(className, "flex items-center px-6 py-4 justify-around")}>
+    <header className={cn(className, `flex items-center px-6 py-4 justify-around ${isSticky && "navbar-sticky"}` )}>
+      {/* Mobile Menu Sheet */}
       <Sheet>
         <SheetTrigger className="absolute left-4"><Menu size={48}/></SheetTrigger>
         <SheetHeader className="sr-only">
@@ -59,44 +63,27 @@ export default function NavBarMobile({className}: {className?: string}) {
                 <CollapsibleContent>
                   <ul className="space-y-3 pl-10">
                     <li>
-                        <Link className="text-sm" href="/services/office-support">Office Support</Link>
+                      <Link className="text-sm" href="/services/office-support">Office Support</Link>
                     </li>
                     <li>
-                        <Link className="text-sm" href="/services/website-development">Website Development</Link>
+                      <Link className="text-sm" href="/services/website-development">Website Development</Link>
                     </li>
                     <li>
-                        <Link className="text-sm" href="/services/microsoft-365">Microsoft 365</Link>
+                      <Link className="text-sm" href="/services/microsoft-365">Microsoft 365</Link>
                     </li>
                     <li>
-                        <Link className="text-sm" href="/services/remote-access">Remote Access</Link>
+                      <Link className="text-sm" href="/services/remote-access">Remote Access</Link>
                     </li>
                   </ul>
                 </CollapsibleContent>
               </Collapsible>
 
               {/* Service Areas */}
-              <Collapsible>
-                <CollapsibleTrigger className={`${navigationMenuTriggerStyle()} navbar-heading w-full text-center`}>
-                  Service Areas
-                  <ChevronDownIcon className="relative top-px ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" size={16}/>
-                </CollapsibleTrigger>
-                <CollapsibleContent>
-                  <ul className="space-y-3 pl-10">
-                    <li>
-                      <p className="text-sm">Toronto</p>
-                    </li>
-                    <li>
-                      <p className="text-sm">Vaughan</p>
-                    </li>
-                    <li>
-                      <p className="text-sm">Mississauga</p>
-                    </li>
-                    <li>
-                      <p className="text-sm">Markham</p>
-                    </li>
-                  </ul>
-                </CollapsibleContent>
-              </Collapsible>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} navbar-heading w-full max-w-[200px] text-center`}>
+                  <Link href="/service-areas">Service Areas</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
               {/* About */}
               <NavigationMenuItem>
@@ -124,7 +111,7 @@ export default function NavBarMobile({className}: {className?: string}) {
       </Sheet>
 
       {/* Home Page & Logo */}
-      <Link className="row" href="/">
+      <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
         <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
         <span className="text-3xl font-bold whitespace-nowrap">IT Resolved</span>
       </Link>

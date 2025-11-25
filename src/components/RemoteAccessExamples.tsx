@@ -1,6 +1,8 @@
 // src/app/components/RemoteAccessExamples.tsx
 
 import Image from "next/image"
+
+// UI component from shadcn/ui
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const softwares: { 

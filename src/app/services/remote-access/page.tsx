@@ -2,6 +2,7 @@
 
 import type { Metadata } from "next";
 
+// Custom component
 import RemoteAccessExamples from "@/components/RemoteAccessExamples";
 
 export const metadata: Metadata = {

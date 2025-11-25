@@ -1,6 +1,10 @@
+// src/components/nav/NavController.tsx
+
 'use client';
 
 import { useState, useEffect } from 'react';
+
+// Custom components
 import NavMenuMobile from '@/components/nav/NavMenuMobile';
 import NavMenuDesktop from '@/components/nav/NavMenuDesktop';
 

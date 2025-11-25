@@ -35,7 +35,7 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <link rel="icon" type="image/x-icon" href="/images/icon.ico" sizes="48x48"/>
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col h-dvh`}>
         <NavController className="bg-secondary-foreground" />
 
         {children}

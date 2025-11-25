@@ -17,10 +17,10 @@ export default function Home() {
   return (
     <main className="mt-0">
       <HeroBanner />
-      <div className="col">
+      <div id="scrollto" className="col scroll-mt-10">
         <h1>IT Resolved Home</h1>
         <p className="page-description">
-          Welcome to IT Resolved, your trusted partner for in-office tech support,
+          Welcome to IT Resolved, your trusted partner for in-office tech support
           and website development. I help businesses streamline operations, stay secure, and
           build an online presence.
         </p>

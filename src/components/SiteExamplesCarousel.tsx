@@ -1,8 +1,8 @@
 // src/app/components/SiteExamplesCarousel.tsx
 
 import Image from "next/image"
-import { Maximize, ChevronRightIcon } from 'lucide-react';  // Icons
 
+// UI components from shadcn/ui
 import { AspectRatio } from "@/components/ui/aspect-ratio"
 import { Button } from "@/components/ui/button"
 import {
@@ -30,6 +30,8 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog"
 import { ScrollArea } from "@/components/ui/scroll-area"
+
+import { Maximize, ChevronRightIcon } from 'lucide-react';  // Icons
 
 const websites: { 
   title: string; 
@@ -89,7 +91,6 @@ export default function SiteExamplesCarousel() {
     <div className="w-full px-12 flex flex-col items-center justify-center">
       <Carousel className="w-full max-w-md md:max-w-2xl lg:max-w-5xl xl:max-w-7xl">
         <h2>Featured Portfolio</h2>
-
         <CarouselContent>
           {websites.map((website) => (
             <CarouselItem key={website.title} className="md:basis-1/2 lg:basis-1/3">
@@ -170,8 +171,8 @@ export default function SiteExamplesCarousel() {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="visible lg:invisible"/>
+        <CarouselNext className="visible lg:invisible"/>
       </Carousel>
     </div>
   );

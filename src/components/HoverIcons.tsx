@@ -4,14 +4,21 @@
 
 import { useState } from "react"
 
+// UI components from shadcn/ui
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card"
 
-// Icon props for TS types & icon imports
-import { LucideProps, Printer, MailCheck, RefreshCcw, CloudUpload } from "lucide-react"
+// Icons
+import { 
+  LucideProps,
+  Printer,
+  MailCheck,
+  RefreshCcw,
+  CloudUpload 
+} from "lucide-react"
 
 const services: { 
   icon: React.ForwardRefExoticComponent<Omit<LucideProps, "ref">>; 
