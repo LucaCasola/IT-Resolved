@@ -79,28 +79,11 @@ export default function NavBarMobile({className}: {className?: string}) {
               </Collapsible>
 
               {/* Service Areas */}
-              <Collapsible>
-                <CollapsibleTrigger className={`${navigationMenuTriggerStyle()} navbar-heading w-full text-center`}>
-                  Service Areas
-                  <ChevronDownIcon className="relative top-px ml-1 size-3 transition duration-300 group-data-[state=open]:rotate-180" aria-hidden="true" size={16}/>
-                </CollapsibleTrigger>
-                <CollapsibleContent>
-                  <ul className="space-y-3 pl-10">
-                    <li>
-                      <p className="text-sm">Toronto</p>
-                    </li>
-                    <li>
-                      <p className="text-sm">Vaughan</p>
-                    </li>
-                    <li>
-                      <p className="text-sm">Mississauga</p>
-                    </li>
-                    <li>
-                      <p className="text-sm">Markham</p>
-                    </li>
-                  </ul>
-                </CollapsibleContent>
-              </Collapsible>
+              <NavigationMenuItem>
+                <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} navbar-heading w-full max-w-[200px] text-center`}>
+                  <Link href="/service-areas">Service Areas</Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
 
               {/* About */}
               <NavigationMenuItem>

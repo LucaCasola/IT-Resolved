@@ -70,26 +70,9 @@ export default function NavBarDesktop({className}: {className?: string}) {
 
             {/* Service Areas */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="navbar-heading">Service Areas</NavigationMenuTrigger>
-              <NavigationMenuContent className="z-10 p-0">
-                <ul className="grid w-36 gap-2 px-4 py-3 text-lg bg-secondary-foreground/50">
-                  <li>
-                    <p>Toronto</p>
-                  </li>
-                  <li>
-                    <p>Vaughan</p>
-                  </li>
-                  <li>
-                    <p>Mississauga</p>
-                  </li>
-                  <li>
-                    <p>Markham</p>
-                  </li>
-                  <li>
-                    <p>Richmond Hill</p>
-                  </li>
-                </ul>
-              </NavigationMenuContent>
+              <NavigationMenuLink asChild className={`${navigationMenuTriggerStyle()} navbar-heading`}>
+                <Link href="/service-areas">Service Areas</Link>
+              </NavigationMenuLink>
             </NavigationMenuItem>
 
             {/* About */}
