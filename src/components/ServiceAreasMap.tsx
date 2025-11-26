@@ -36,8 +36,8 @@ export default function ServiceAreasMap() {
   ] satisfies LatLngExpression[]
 
   return (
-    <section className="w-full max-w-7xl h-full min-h-150 max-h-200 px-0 md:px-20">
-      <Map center={[43.7676229, -79.5204163]} zoom={10} className="fill z-9">
+    <section className="w-full max-w-7xl h-[80vh] max-h-240 shadow-md">
+      <Map center={[43.7676229, -79.5204163]} zoom={9.7} className="w-full h-full z-9">
         <MapTileLayer />
         <MapPolygon positions={GTABounds} />
         <MapZoomControl />

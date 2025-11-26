@@ -21,16 +21,13 @@ export default function About() {
           website development services tailored to meet the unique needs of local businesses.
         </p>
       </div>
-      <section className="col">
-        <h2>About Me</h2>
-        <ImageWithText 
-          imgPath="/images/really-cool-guy.jpg" 
-          alt="A really cool guy dressed in stylish clothes"
-          bodyText="Hi, I'm Luca, the owner and lead technician at IT Resolved. With an Honours Bachelor of Technology in Software 
-            Development and over 7 years of experience, my passion lies in helping people take full advantage of technology."
-          variant="circle" 
-        />
-      </section>
+      <ImageWithText 
+        imgPath="/images/really-cool-guy.jpg" 
+        alt="A really cool guy dressed in stylish clothes"
+        bodyText="Hi, I'm Luca, the owner and lead technician at IT Resolved. With an Honours Bachelor of Technology in Software 
+          Development and over 7 years of experience, my passion lies in helping people take full advantage of technology."
+        variant="circle" 
+      />
     </main>
   );
 }

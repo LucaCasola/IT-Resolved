@@ -38,9 +38,12 @@ export default function ImageWithText({imgPath, alt, bodyText, variant} :  {imgP
             />
           </AspectRatio>
         </div>
-        <p className="text-sm md:text-base lg:text-xl text-balance text-center md:text-start col-span-2 md:col-span-1 pt-4 md:pt-0">
-          {bodyText}
-        </p>
+        <div className="col md:items-start! col-span-2 md:col-span-1">
+          <h2 className="text-start! m-0!">About Me</h2>
+          <p className="text-sm md:text-base lg:text-xl text-balance text-center md:text-start">
+            {bodyText}
+          </p>
+        </div>
       </div>
     </div>
   )
