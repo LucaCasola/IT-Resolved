@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ServiceAreas() {
   return (
-    <main className="grow gap-y-2! md:gap-y-6!">
+    <main className="gap-y-2! md:gap-y-6!">
       <div className="col">
         <h1>Service Areas</h1>
         <p className="page-description">
