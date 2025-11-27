@@ -27,7 +27,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
     <footer className={cn(className, "flex justify-center")}>
       <div className="grid grid-cols-2 md:grid-cols-3 justify-self-center-safe justify-items-center gap-y-10 gap-x-10 mx:gap-y-0 md:gap-x-2 lg:gap-24 xl:gap-32 my-8 mx-4 md:mx-10">
         <section className="footer-section">
-          <h4>Services</h4>
+          <h4 className="text-start!">Services</h4>
           <p><Link href="/services/office-support">Office Support</Link></p>
           <p><Link href="/services/website-development">Website Development</Link></p>
           <p><Link href="/services/microsoft-365">Microsoft 365</Link></p>
@@ -35,7 +35,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
         </section>
 
         <section className="footer-section">
-          <h4>Areas</h4>
+          <h4 className="text-start!">Areas</h4>
           <p>Toronto</p>
           <p>Vaughan</p>
           <p>Mississauga</p>
