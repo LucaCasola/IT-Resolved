@@ -8,7 +8,8 @@ import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 
 export const metadata: Metadata = {
   title: "Microsoft 365 Services | IT Resolved",
-  description: "Information about Microsoft 365 services offered by IT Resolved",
+  description: `Professional Microsoft 365 setup, migration, and support services. Expert configuration of Office 
+    apps, Teams, OneDrive, and email migration for businesses. Get your team connected and productive.`,
 };
 
 export default function Microsoft365() {
