@@ -7,7 +7,8 @@ import ContactForm from "@/components/ContactForm";
 
 export const metadata: Metadata = {
   title: "Contact | IT Resolved",
-  description: "Get in touch with us at IT Resolved",
+  description: `Ready to get started? Get in touch for reliable IT support, website development, and business 
+    technology solutions. Free consultations available. Professional IT services in the Greater Toronto Area.`,
 };
 
 export default function Contact() {

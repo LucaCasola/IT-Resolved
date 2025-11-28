@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// components
+// Custom components
 import NavController from "@/components/nav/NavController";
 import Footer from "@/components/Footer";
 
@@ -19,8 +19,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IT Resolved",
-  description: "Your go-to IT solutions",
+  title: "IT Resolved | Business IT Solutions",
+  description: "Your go-to IT solutions for local businesses",
   manifest: "/manifest.ts",
 };
 
