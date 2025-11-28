@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "IT Resolved",
   description: "Your go-to IT solutions",
-  manifest: "/manifest.json",
+  manifest: "/manifest.ts",
 };
 
 export default function RootLayout({
