@@ -4,7 +4,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-// components
+// Custom components
 import NavController from "@/components/nav/NavController";
 import Footer from "@/components/Footer";
 
@@ -19,9 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "IT Resolved",
-  description: "Your go-to IT solutions",
-  manifest: "/manifest.json",
+  title: "IT Resolved | Business IT Solutions",
+  description: "Your go-to IT solutions for local businesses",
+  manifest: "/manifest.ts",
 };
 
 export default function RootLayout({
@@ -33,7 +33,6 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta charSet="utf-8" />
-        <link rel="icon" type="image/x-icon" href="/images/icon.ico" sizes="48x48"/>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
         <NavController className="bg-secondary-foreground" />
