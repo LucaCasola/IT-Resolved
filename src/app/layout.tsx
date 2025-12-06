@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -16,6 +17,11 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const nohemiSemiBold = localFont({
+  src: "/Nohemi-SemiBold.woff2",
+  variable: "--font-nohemi-semibold",
 });
 
 export const metadata: Metadata = {
@@ -48,7 +54,7 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="IT Resolved" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${nohemiSemiBold.variable} antialiased flex flex-col min-h-screen`}>
         <NavController className="bg-secondary-foreground" />
 
         {children}
