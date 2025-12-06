@@ -33,8 +33,11 @@ export default function NavBarDesktop({className}: {className?: string}) {
             <NavigationMenuItem className="xl:mr-20 xl:-ml-20">
               <NavigationMenuLink asChild>
                 <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
-                  <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
-                  <span className="text-3xl font-bold">IT Resolved</span>
+                  <Image src="/nav-icon-light.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
+                  <div className="flex flex-col ">
+                    <p className="text-2xl leading-none font-logo">IT</p>
+                    <p className="text-2xl leading-none font-logo">Resolved</p>
+                  </div>
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
