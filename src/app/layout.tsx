@@ -23,9 +23,18 @@ export const metadata: Metadata = {
   description: "Your go-to IT solutions for local businesses",
   icons: {
     icon: [
-      { url: '/favicon.ico', media: '(prefers-color-scheme: light)' },
-      { url: '/favicon-dark.ico', media: '(prefers-color-scheme: dark)' },
+      { 
+        media: '(prefers-color-scheme: light)',
+        url: '/favicon.ico',
+        type: 'image/x-icon',
+      },
+      { 
+        media: '(prefers-color-scheme: dark)',
+        url: '/favicon-dark.ico',
+        type: 'image/x-icon',
+      },
     ],
+    apple: '/apple-icon.png', 
   },
   manifest: "/manifest.ts",
 };
