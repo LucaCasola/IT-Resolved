@@ -1,3 +1,8 @@
+// src/app/manifest.ts
+
+// PWA manifest configuration for Next.js
+// Next.js automatically generates /manifest.webmanifest from this file
+
 import type { MetadataRoute } from 'next'
  
 export default function manifest(): MetadataRoute.Manifest {
