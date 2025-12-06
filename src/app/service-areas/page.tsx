@@ -7,8 +7,7 @@ import ServiceAreasMap from "@/components/ServiceAreasMap";
 
 export const metadata: Metadata = {
   title: "Service Areas | IT Resolved",
-  description: `IT Resolved serves the Greater Toronto Area including Toronto, Vaughan, Mississauga, Brampton, 
-    Markham, and Richmond Hill. Professional IT support and web development services across the GTA.`,
+  description: `IT Resolved serves the Greater Toronto Area including Toronto, Vaughan, Mississauga, Brampton, Markham, and Richmond Hill. Professional IT support and web development services across the GTA.`,
 };
 
 export default function ServiceAreas() {

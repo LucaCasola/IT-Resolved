@@ -7,8 +7,7 @@ import SiteExamplesCarousel from "@/components/SiteExamplesCarousel";
 
 export const metadata: Metadata = {
   title: "Web Development Services | IT Resolved",
-  description: `Professional website development services in the GTA. Custom responsive websites built 
-    with modern technologies that convert visitors into customers. SEO-optimized and mobile-friendly designs.`,
+  description: `Professional website development services in the GTA. Custom responsive websites built with modern technologies that convert visitors into customers. SEO-optimized and mobile-friendly designs.`,
 };
 export default function WebsiteDevelopment() {
   return (
