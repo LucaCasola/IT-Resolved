@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     ],
     apple: '/apple-icon.png', 
   },
-  manifest: "/manifest.ts",
 };
 
 export default function RootLayout({
