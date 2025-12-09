@@ -19,10 +19,21 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const nohemiSemiBold = localFont({
-  src: "/Nohemi-SemiBold.woff2",
-  variable: "--font-nohemi-semibold",
-});
+const nohemi = localFont({
+  variable: "--font-nohemi",
+  src: [
+    {
+      path: '../../public/fonts/Nohemi/Nohemi-Regular.woff2',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../../public/fonts/Nohemi/Nohemi-Bold.woff2',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
 
 export const metadata: Metadata = {
   title: "IT Resolved | Business IT Solutions",
@@ -54,7 +65,7 @@ export default function RootLayout({
       <head>
         <meta name="apple-mobile-web-app-title" content="IT Resolved" />
       </head>
-      <body className={`${geistSans.variable} ${geistMono.variable} ${nohemiSemiBold.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${geistSans.variable} ${geistMono.variable} ${nohemi.variable} antialiased flex flex-col min-h-screen`}>
         <NavController className="bg-secondary-foreground" />
 
         {children}
