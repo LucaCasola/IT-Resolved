@@ -11,6 +11,8 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip"
+import { toast } from "sonner"
+
 
 // Icons
 import { 
@@ -19,7 +21,8 @@ import {
   Phone,
   PhoneCall,
   Mail,
-  MailOpen 
+  MailOpen,
+  Copy
 } from 'lucide-react';
 
 export default function NavBarDesktop({className}: {className?: string}) {
@@ -53,31 +56,49 @@ export default function NavBarDesktop({className}: {className?: string}) {
               <Clock size={20} />
               <p>Mon - Fri &nbsp; | &nbsp; 9 a.m - 5 p.m</p>
             </div>
-            <Tooltip>
-              <TooltipTrigger className="row group" onClick={() => window.open("tel:416-523-5696")}>
-                <Phone size={20} className="block group-hover:hidden" />
-                <PhoneCall size={20} className="hidden group-hover:block" />
-                <p className="button-link">(416) 523-5696</p>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Click to open phone dialer</p>
-              </TooltipContent>
-            </Tooltip>
-            <Tooltip>
-              <TooltipTrigger className="row group" onClick={() => window.open("mailto:contact@itresolved.com")}>
-                <Mail size={20} className="block group-hover:hidden" />
-                <MailOpen size={20} className="hidden group-hover:block" />
-                <p className="button-link">contact@itresolved.com</p>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>Click to open email</p>
-              </TooltipContent>
-            </Tooltip>
+            <div className="row">
+              <Tooltip>
+                <TooltipTrigger className="row group" onClick={() => window.open("tel:416-523-5696")}>
+                  <Phone size={20} className="block group-hover:hidden" />
+                  <PhoneCall size={20} className="hidden group-hover:block" />
+                  <p className="group-hover:underline">(416) 523-5696</p>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Click to open phone dialer</p>
+                </TooltipContent>
+              </Tooltip>
+              <Copy 
+                size={15} className="cursor-pointer text-muted ml-1" 
+                onClick={() => {
+                  navigator.clipboard.writeText("416-523-5696");
+                  toast("Phone number copied to clipboard")
+                }} 
+              />
+            </div>
+            <div className="row">
+              <Tooltip>
+                <TooltipTrigger className="row group" onClick={() => window.open("mailto:contact@itresolved.com")}>
+                  <Mail size={20} className="block group-hover:hidden" />
+                  <MailOpen size={20} className="hidden group-hover:block" />
+                  <p className="group-hover:underline">contact@itresolved.com</p>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>Click to open email</p>
+                </TooltipContent>
+              </Tooltip>
+              <Copy 
+                size={15} className="cursor-pointer text-muted ml-1" 
+                onClick={() => {
+                  navigator.clipboard.writeText("contact@itresolved.com");
+                  toast("Email copied to clipboard")
+                }} 
+              />
+            </div>
           </section>
         </div>
       </div>
       <div className="flex justify-center">
-        <p className="font-nohemi font-extralight text-xs text-muted">Site logo by Ryan Duong - rduong.designs@gmail.com</p>
+        <p className="text-xs text-muted italic">Site logo by Ryan Duong - rduong.designs@gmail.com</p>
       </div>
     </footer>
   )
