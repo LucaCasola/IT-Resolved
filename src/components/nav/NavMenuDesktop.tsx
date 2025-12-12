@@ -20,6 +20,8 @@ import { Button } from "../ui/button"
 
 import { Phone } from 'lucide-react';  // Icons
 
+// Custom components
+import Logo from "@/components/Logo";
 
 export default function NavBarDesktop({className}: {className?: string}) {
    const isSticky : Boolean = true
@@ -32,39 +34,35 @@ export default function NavBarDesktop({className}: {className?: string}) {
             {/* Home Page & Logo */}
             <NavigationMenuItem className="xl:mr-20 xl:-ml-20">
               <NavigationMenuLink asChild>
-                <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
-                  <Image src="/nav-icon-light.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
-                  <div className="flex flex-col ">
-                    <p className="text-2xl leading-none font-logo font-bold">IT</p>
-                    <p className="text-2xl leading-none font-logo">Resolved</p>
-                  </div>
+                <Link className="no-hover p-1" href="/">
+                  <Logo />
                 </Link>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
             {/* Services */}
             <NavigationMenuItem>
-              <NavigationMenuTrigger className="navbar-heading ">Services</NavigationMenuTrigger>
+              <NavigationMenuTrigger className={`${navigationMenuTriggerStyle()} navbar-heading`}>Services</NavigationMenuTrigger>
               <NavigationMenuContent className="z-10 p-0">
-                <ul className="grid w-68 gap-1 px-2 py-1 z-10 text-lg bg-secondary-foreground/50">
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/services/office-support">Office Support</Link>
+                <ul className="grid w-64 gap-1 px-2 py-1 z-10 bg-secondary-foreground/50">
+                  <li className="p-1">
+                    <NavigationMenuLink asChild className="hover:bg-transparent!">
+                      <Link href="/services/office-support" className="navbar-dropdown-links">Office Support</Link>
                     </NavigationMenuLink>
                   </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/services/website-development">Website Development</Link>
+                  <li className="p-1">
+                    <NavigationMenuLink asChild className="hover:bg-transparent!">
+                      <Link href="/services/website-development" className="navbar-dropdown-links">Website Development</Link>
                     </NavigationMenuLink>
                   </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/services/microsoft-365">Microsoft 365 Configuration</Link>
+                  <li className="p-1">
+                    <NavigationMenuLink asChild className="hover:bg-transparent!">
+                      <Link href="/services/microsoft-365" className="navbar-dropdown-links">Microsoft 365 Configuration</Link>
                     </NavigationMenuLink>
                   </li>
-                  <li>
-                    <NavigationMenuLink asChild>
-                      <Link href="/services/remote-access">Remote Access Configuration</Link>
+                  <li className="p-1">
+                    <NavigationMenuLink asChild className="hover:bg-transparent!">
+                      <Link href="/services/remote-access" className="navbar-dropdown-links">Remote Access Configuration</Link>
                     </NavigationMenuLink>
                   </li>
                 </ul>
