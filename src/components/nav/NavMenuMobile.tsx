@@ -31,6 +31,8 @@ import { Button } from "../ui/button"
 
 import { Phone, Menu, ChevronDownIcon } from 'lucide-react'; // Icons
 
+// Custom components
+import Logo from "@/components/Logo";
 
 export default function NavBarMobile({className}: {className?: string}) {
   const isSticky : Boolean = true
@@ -111,9 +113,8 @@ export default function NavBarMobile({className}: {className?: string}) {
       </Sheet>
 
       {/* Home Page & Logo */}
-      <Link className="row hover:[text-shadow:0px_0_0_currentColor]!" href="/">
-        <Image src="/images/logo.png" alt="IT Resolved Logo" width={45} height={45} className="inline-block mr-2"/>
-        <span className="text-3xl font-bold whitespace-nowrap">IT Resolved</span>
+      <Link className="no-hover p-1" href="/">
+        <Logo />
       </Link>
     </header>
   )

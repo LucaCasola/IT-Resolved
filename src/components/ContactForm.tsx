@@ -127,8 +127,16 @@ export default function ContactForm({
       className={cn(formVariants({ variant, className }))}
     >
       <FieldSet className="w-9/10 md:w-xl lg:w-3xl">
-        <FieldLegend className="text-2xl! font-bold">Contact Me</FieldLegend>
-        <FieldDescription>
+        { variant == "default" || variant == undefined ? (
+          <FieldLegend className="text-center!">
+            <h2>Contact Me</h2>
+          </FieldLegend>
+        ) : (
+          <FieldLegend>
+            <h3>Get in Touch</h3>
+          </FieldLegend>
+        )}
+        <FieldDescription className="text-md">
           Have any questions or looking for a quote? Fill out the form below and I'll be in touch within the day.
         </FieldDescription>
 

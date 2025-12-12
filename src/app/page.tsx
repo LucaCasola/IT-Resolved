@@ -10,8 +10,7 @@ import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: "IT Resolved | Business IT Solutions & Web Development",
-  description: `Streamline your business operations with professional IT support and web development services. Expert  
-    on-site support helping businesses in the Greater Toronto Area stay secure, efficient, and up to date.`
+  description: `Streamline your business operations with professional IT support and web development services. Expert on-site support helping businesses in the Greater Toronto Area stay secure, efficient, and up to date.`
 };
 
 export default function Home() {

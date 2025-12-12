@@ -7,8 +7,7 @@ import HoverIcons from "@/components/HoverIcons";
 
 export const metadata: Metadata = {
   title: "Office Support Services | IT Resolved",
-  description: `Comprehensive office IT support services in the GTA. Software installation, troubleshooting, 
-    printer setup, data migration, and general IT assistance for small businesses and offices.`,
+  description: `Comprehensive office IT support services in the GTA. Software installation, troubleshooting,  printer setup, data migration, and general IT assistance for small businesses and offices.`,
 };
 
 export default function OfficeSupport() {
