@@ -7,8 +7,7 @@ import ImageWithText from "@/components/ImageWithText";
 
 export const metadata: Metadata = {
   title: "About | IT Resolved",
-  description: `Meet Luca, owner of IT Resolved. Honours Bachelor of Technology in Software Development 
-    with experience providing IT support and web development services to Toronto area businesses.`,
+  description: `Meet Luca, owner of IT Resolved. Honours Bachelor of Technology in Software Development with experience providing IT support and web development services to Toronto area businesses.`,
 };
 
 export default function About() {
