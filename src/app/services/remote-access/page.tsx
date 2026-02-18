@@ -7,7 +7,7 @@ import RemoteAccessExamples from "@/components/RemoteAccessExamples";
 
 export const metadata: Metadata = {
   title: "Remote Access Setup Services | IT Resolved",
-  description: `Secure remote access setup for businesses. Professional installation of, TeamViewer, ScreenConnect, and more. Enable your team to work efficiently from anywhere.`,
+  description: `Secure remote access setup for businesses. TeamViewer, ScreenConnect, and more. Enable your team to work efficiently from anywhere.`,
 };
 
 export default function RemoteAccess() {
