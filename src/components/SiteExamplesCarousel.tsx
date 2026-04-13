@@ -62,20 +62,6 @@ const websites: {
     imageAlt: "Screenshot of Leather Treaty Sports website",
   },
   {
-    title: "Queen Nest Hotel",
-    link: "queennesthotel.com",
-    linkText: "queennesthotel.com",
-    description:
-      "Hotel website offering affordable comfort in the heart of Toronto.",
-    descriptionBullets: [
-      "Built with GoDaddy's Website Builder",
-      "Worked with client to design and implement their vision",
-      "Integrated with booking system for easy reservations",
-    ],
-    imageFolder: "Queen-Nest-Hotel",
-    imageAlt: "Screenshot of Queen Nest Hotel website",
-  },
-  {
     title: "IT Resolved",
     link: "github.com/LucaCasola/IT-Resolved",
     linkText: "code repo",
@@ -98,7 +84,7 @@ export default function SiteExamplesCarousel() {
     <div className="w-full px-12 flex flex-col items-center justify-center">
       <Carousel className="w-full max-w-md md:max-w-2xl lg:max-w-5xl xl:max-w-7xl">
         <h2>Featured Portfolio</h2>
-        <CarouselContent>
+        <CarouselContent className="lg:justify-center">
           {websites.map((website) => (
             <CarouselItem key={website.title} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1 h-full">
