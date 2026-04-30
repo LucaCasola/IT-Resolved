@@ -77,10 +77,10 @@ export default function NavBarDesktop({className}: {className?: string}) {
             </div>
             <div className="row">
               <Tooltip>
-                <TooltipTrigger className="row group" onClick={() => window.open("mailto:contact@itresolved.com")}>
+                <TooltipTrigger className="row group" onClick={() => window.open("mailto:contact@itresolved.ca")}>
                   <Mail size={20} className="block group-hover:hidden" />
                   <MailOpen size={20} className="hidden group-hover:block" />
-                  <p className="group-hover:underline">contact@itresolved.com</p>
+                  <p className="group-hover:underline">contact@itresolved.ca</p>
                 </TooltipTrigger>
                 <TooltipContent>
                   <p>Click to open email</p>
@@ -89,7 +89,7 @@ export default function NavBarDesktop({className}: {className?: string}) {
               <Copy 
                 size={15} className="cursor-pointer text-muted ml-1" 
                 onClick={() => {
-                  navigator.clipboard.writeText("contact@itresolved.com");
+                  navigator.clipboard.writeText("contact@itresolved.ca");
                   toast("Email copied to clipboard")
                 }} 
               />
