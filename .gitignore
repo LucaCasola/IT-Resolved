@@ -20,6 +20,9 @@
 # opennext
 /.open-next/
 
+# wranger build output
+/.wrangler
+
 # production
 /build
 
