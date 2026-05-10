@@ -25,7 +25,7 @@ import {
   Copy
 } from 'lucide-react';
 
-export default function NavBarDesktop({className}: {className?: string}) {
+export default function Footer({className}: {className?: string}) {
   return (
     <footer className={cn(className, "flex flex-col justify-center pb-4")}>
       <div className="flex justify-center">
